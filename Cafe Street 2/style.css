@@ -409,7 +409,6 @@ span.orange {
 }
 
 .box-reviews {
-    display: flex;
     margin: 0px 40px;
     width: 985px;
 }
@@ -418,6 +417,18 @@ span.orange {
     display: flex;
     overflow: hidden;
     width: 100%; /* teste */
+}
+
+.box-review1 {
+    display: flex;
+}
+
+.box-review2 {
+    display: flex;
+}
+
+.box-review3 {
+    display: flex;
 }
 
 .review {
@@ -434,7 +445,7 @@ span.orange {
 .review .image img {
     border: 5px solid #FFD390;
     height: 300px;
-    width: 215px;
+    width: 230px;
 }
 
 .review .feedback {
@@ -460,9 +471,7 @@ span.orange {
 
 .review-buttons {
     display: flex;
-    
     justify-content: center;
-    
 }
 
 .review-button {

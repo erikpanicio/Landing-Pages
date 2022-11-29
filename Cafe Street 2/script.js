@@ -10,30 +10,35 @@ function clicado() {
 }
 
 function first() {
-    var box_review = document.getElementsByClassName("box-review")[0]
-    box_review.style.justifyContent = "flex-start"
+    var box_review1 = document.getElementsByClassName("box-review1")[0]    
+    var box_review2 = document.getElementsByClassName("box-review2")[0]
+    var box_review3 = document.getElementsByClassName("box-review3")[0]
 
-    /* var color_first = document.getElementsByClassName("first")[0]
-    color_first.style.backgroundColor = "#7c5912" */
+    box_review1.style.display = "flex"
+    box_review2.style.display = "none"
+    box_review3.style.display = "none"
 }
 
 function second() {
-    var box_review = document.getElementsByClassName("box-review")[0]
-    box_review.style.justifyContent = "center"
+    var box_review1 = document.getElementsByClassName("box-review1")[0]    
+    var box_review2 = document.getElementsByClassName("box-review2")[0]
+    var box_review3 = document.getElementsByClassName("box-review3")[0]
 
-    var feedback = document.getSelection
+    box_review1.style.display = "none"
+    box_review2.style.display = "flex"
+    box_review3.style.display = "none"
 
-    /* var color_second = document.getElementsByClassName("second")[0]
-    color_second.style.backgroundColor = "#7c5912" */
+
 }
 
 function third() {
-    var box_review = document.getElementsByClassName("box-review")[0]
-    box_review.style.justifyContent = "flex-end"
+    var box_review1 = document.getElementsByClassName("box-review1")[0]    
+    var box_review2 = document.getElementsByClassName("box-review2")[0]
+    var box_review3 = document.getElementsByClassName("box-review3")[0]
 
-    
-    /* var color_third = document.getElementsByClassName("third")[0]
-    color_third.style.backgroundColor = "#7c5912" */
+    box_review1.style.display = "none"
+    box_review2.style.display = "none"
+    box_review3.style.display = "flex"
 }
 
 /* 
