@@ -1,0 +1,814 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --cor1: #FF902A;
+    --cor2: #db7c22;
+    --cor3: #2F2105;
+    --cor4: #5e430d;
+    --cor5: #F9D9AA;
+    --cor6: #F7EBDA;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 20px;
+}
+
+#background {
+    background-image: url("images/background1A.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1500px;
+    margin: 50px 20px;
+}
+
+/* container do popular now, para que eu possa deixar o fundo completo, sem margin */
+
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    list-style: none;
+}
+
+.header-left img {
+    width: 180px;
+    vertical-align: middle;
+}
+
+.header-center, .header-right {
+    display: flex;
+}
+
+.header-center li {
+    margin-right: 40px;
+}
+
+.header-center li:last-child, .header-right li:last-child {
+    margin-right: 0;
+}
+
+.header-center a {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.header-center a:hover {
+    color: var(--cor1);
+}
+
+.header-right li {
+    margin-right: 20px;
+}
+
+.header-right input {
+    background-image: url("images/search.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.212);
+}
+
+.header-right img {
+    width: 2rem;
+    text-align: center;
+}
+
+#button-mobile {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+    color: white;
+}
+
+#button-mobile:hover {
+    background-color: var(--cor3);
+}
+
+.contents { /* alinha dentro do container */
+    display: flex;
+    justify-content: center;
+}
+
+#apresentation .container {
+    margin-top: 0;
+}
+
+#apresentation p.up {
+    font-size: 65px;
+    width: 660px;
+    font-weight: 600;
+    color: var(--cor3);
+    margin-bottom: 30px;
+    text-shadow: 10px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+#apresentation span {
+    color: var(--cor1);
+}
+
+#apresentation p.down {
+    font-size: 25px;
+    width: 600px;
+    color: gray;
+    margin-bottom: 30px;
+    text-shadow: 10px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+#apresentation .button {
+    background-color: var(--cor3);
+    background-image: url("images/cart2.svg");
+    background-repeat: no-repeat;
+    background-position: 143px center;
+    background-size: 30px;
+    color: white;
+    padding: 15px 60px 15px 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+#apresentation .button:hover {
+    background-color: var(--cor4);
+}
+
+#apresentation a {
+    color: var(--cor1);
+    font-weight: 700;
+}
+
+#apresentation a:hover {
+    color: var(--cor2);
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+span.orange {
+    border-bottom: 5px solid orange;
+}
+
+.margin-lateral { /* TESTE */
+    margin: 0px 30px;
+}
+
+.box-photos {
+    background-color: var(--cor5);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box-photo {
+    background-color: white;
+    padding: 20px 20px 0px 20px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.coffee-photo img {
+    width: 380px;
+    border-radius: 20px;
+}
+
+.rating {
+    width: 51px;
+    background-color: white;
+    padding: 0px 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    top: -370px;
+    right: -15px;
+}
+
+.rating img {
+    width: 18px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+
+.desc {
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+        "coffee-name coffee-name coffee-name coffee-name coffee-name coffee-name coffee-name coffee-name coffee-name coffee-view"
+        "coffee-type coffee-type coffee-type coffee-type coffee-type coffee-type coffee-type coffee-type coffee-type coffee-cart"
+    ;
+}
+
+.coffee-name {
+    grid-area: coffee-name;
+    font-size: 28px;
+    font-weight: 600;
+}
+.coffee-view {
+    grid-area: coffee-view;
+    font-size: 28px;
+    font-weight: 600;
+}
+.coffee-type {
+    grid-area: coffee-type;
+    font-weight: 600;
+    align-items: center;
+    font-size: 20px; /* para o coffee type do special */
+}
+.coffee-cart {
+    grid-area: coffee-cart;
+}
+
+.coffee-type {
+    display: flex;
+}
+.coffee-type-hot span{
+    margin-right: 15px;
+    background-color: white;
+    border: 3px solid #ff912aaf;
+    border-radius: 10px;
+    color: #ff912aaf;
+    font-size: 25px;
+    padding: 0px 10px;
+}
+.coffee-type-hot span:hover{
+    border: 3px solid var(--cor1);
+    color: var(--cor1);
+    cursor: pointer;
+}
+.coffee-type-cold span {
+    background-color: white;
+    border: 3px solid #ff912aaf;
+    border-radius: 10px;
+    color: #ff912aaf;
+    font-size: 25px;
+    padding: 0px 10px;
+}
+.coffee-type-cold span:hover{
+    border: 3px solid var(--cor1);
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+.coffee-cart img {
+    vertical-align: middle;
+    width: 50px;
+}
+
+.box-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+/* está alinhando tanto o texto quanto as imagens */
+.box-images .image {
+    text-align: center;
+    margin: 0px 40px 40px 40px;
+}
+
+.box-images .image img {
+    height: 200px; /* width: 200px */
+}
+
+#delivery p.up {
+    color: var(--cor3);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#delivery p.down {
+    font-size: 23px;
+}
+
+/* ABOUT US */
+
+#about-us {
+    background-image: url("images/background2.svg");
+    margin-top: 200px;
+}
+
+#about-us .container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+#about-us .image img {
+    border: 10px solid white;
+    border-radius: 20px;
+    width: 430px;
+    position: relative;
+    top: -120px;
+    box-shadow: 0px 0px 30px 5px rgb(0 0 0 / 20%);
+}
+
+#about-us .text {
+    margin: 80px;
+}
+
+#about-us p.up {
+    font-size: 35px;
+    font-weight: 600;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+#about-us p.down {
+    font-size: 20px;
+    color: gray;
+    width: 500px;
+    text-align: left;
+    margin-bottom: 23px;
+}
+
+#about-us .button {
+    background-color: var(--cor3);
+    color: #ffb42a;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#about-us .button:hover {
+    background-color: var(--cor4);
+}
+
+#special .box-photos {
+    background-color: white;
+}
+
+#special .box-photo {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+#special .coffee-type {
+    width: 250px;
+    color: gray;
+    height: 50px;
+}
+
+/* Comments */
+
+#comments {
+    background-image: url("images/background2.svg");
+}
+
+#comments .contents {
+    padding: 100px 0px 0px 0px;
+    flex-wrap: wrap;
+}
+
+#comments .text {
+    margin-right: 30px;
+    /* height: 250px; */
+}
+
+#comments .text p.down {
+    font-size: 24px;
+    color: gray;
+    width: 450px;
+}
+
+.box-reviews {
+    display: flex;
+    margin: 0px 40px;
+    width: 985px;
+}
+
+.box-review {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* teste */
+}
+
+.review {
+    /* margin: 0px 40px; */
+    margin: 0px 50px;
+    height: 335px;
+}
+
+.review .image { /* OLHAR */ /* centraliza a imagem */
+    justify-content: center;
+    display: flex;
+}
+
+.review .image img {
+    border: 5px solid #FFD390;
+    height: 300px;
+    width: 215px;
+}
+
+.review .feedback {
+    background-color: #FFD390;
+    box-shadow: 0px 0px 0px 10px #f8d19694;
+    padding: 10px;
+    border-radius: 10px;
+    width: 220px;
+    position: relative;
+    top: -115px;
+    /* left: 55px; */
+    left: 0;
+}
+
+.feedback .name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.feedback .comment {
+    font-size: 14px;
+}
+
+.review-buttons {
+    display: flex;
+    
+    justify-content: center;
+    
+}
+
+.review-button {
+    border: 1px solid #7c5912;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-image: url("images/footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+footer .footer-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+    margin: 80px 0px 0px 0px;
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    margin: 20px;
+    text-align: center;
+}
+
+footer input[type=email] {
+    width: 600px;
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer input[type=submit] {
+    background-color: var(--cor3);
+    color: white;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 20px;
+    position: relative;
+    top: -65px;
+    left: 230px;
+    cursor: pointer;
+}
+
+footer input[type=submit]:hover {
+    background-color: var(--cor4);
+}
+/* arrumar o feedback, esta vazando um pouco, as imagens estão quebrando meio atrasadas por causa do box-reviews que está um pouco menor */
+
+@media (max-width: 1790px) {
+    #comments .text {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    #comments .text p.down {
+        width: 100%;
+    }
+    
+    .box-reviews {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1175px) {
+    html {
+        font-size: 18px;
+    }
+
+    #background {
+        background-image: url("images/background1B.svg");
+    }
+
+    #about-us .image {
+        display: none;
+    }
+
+    .box-reviews {
+        width: 100%;
+    }
+
+    .box-review {
+        overflow: scroll;
+    }
+
+    .review-buttons {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 920px) {
+    /* MENU */
+    .header-center {
+        display: none; 
+        position: absolute;
+        top: 85px;
+        right: 2px;
+        background-color: var(--cor4);
+        border-radius: 20px;
+        padding: 10px;
+        /* margin-right: 20px; */
+    }
+    .header-center li {
+        margin: 0;
+        margin-bottom: 5px;
+        text-align: center;
+        border-bottom: 3px solid #7c5912;
+    }
+    .header-center a {
+        color: white;
+    }
+    .header-center a:hover {
+        color: var(--cor1);
+    }
+    .header-right {
+        display: none;
+    }
+    #button-mobile {
+        display: inline;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 775px) {
+    html {
+        font-size: 16px;
+    }
+    
+    #apresentation p.up {
+        font-size: 3.25rem;
+        width: 33rem;
+    }
+    #apresentation p.down {
+        width: 30rem;
+    }
+    
+    #about-us {
+        margin: 0;
+    }
+    #about-us .text {
+        margin: 80px 0px;
+    }
+
+    #about-us p.up {
+        width: 85vw;
+        /* font-size: 10vw; */
+    }
+    
+    #about-us p.down {
+        width: 85vw;
+        /* font-size: 6.5vw; */
+    }
+
+    footer input[type=email] {
+        width: 400px;
+    }
+    
+    footer input[type=submit] {
+        top: -65px;
+        left: 130px;
+    }
+}
+
+@media (max-width: 560px) {
+    /* arrumar um jeito de deixar as imagens diminuirem pelo lado e não pela diagonal OU arrumar o rating*/
+
+    #apresentation p.up {
+        font-size: 3.25rem;
+        width: 90vw;
+    }
+
+    #apresentation p.down {
+        font-size: 1.25rem;
+        width: 90vw;
+    }
+
+    .box-button {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #apresentation .button {
+        /* display: block; */
+        margin: 0px 0px 20px 0px;
+    }
+
+    #apresentation a {
+        /* margin: 45px; */
+        /* flex-direction: column; */
+        flex: 100%;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    #popular-now .container {
+        margin: 50px 0px;
+    }
+
+    .margin-lateral {
+        margin: 0;
+    }
+
+    .box-photos {
+        border-radius: 0;
+        padding: 0px;
+    }
+
+    .coffee-photo img {
+        width: 70vw;
+    }
+
+    .rating {
+        top: -88%;
+        width: 13vw;
+        font-size: 4.5vw;
+        padding: 0px 1.5vw;
+    }
+
+    .rating img {
+        width: 4.5vw;
+    }
+
+    .coffee-name {
+        font-size: 6vw;
+    }
+    .coffee-view {
+        font-size: 6vw;
+    }
+    .coffee-cart img{
+        width: 10vw;
+    }
+    .coffee-type {
+        margin-top: 10px;
+        /* margin-bottom: 20px; */
+        font-size: 3.5vw; /* para o coffee type do special */
+    }
+    .coffee-type-hot span{
+        font-size: 5vw;
+    }
+    .coffee-type-cold span{
+        font-size: 5vw;
+    }
+    #special .coffee-type { /* para o coffee type do special */
+        width: 40vw;
+        height: 3vw;
+    }
+
+    /* .review .feedback {
+        width: 50vw;
+    }
+
+    .feedback .name {
+        font-size: 3.5vw;
+    }
+    .feedback .comment {
+        font-size: 3vw;
+    } */
+    
+    footer .footer-box{
+        margin: 0;
+    }
+
+    footer input[type=email] {
+        width: 60vw;
+        text-align: center;
+    }
+    
+    footer input[type=submit] {
+        top: 0;
+        left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 475px) {
+    .header-left img { /* teste */
+        width: 40vw;
+    }
+    
+    #apresentation p.up {
+        font-size: 15vw;
+    }
+
+    .box-images .image img { /* teste */
+        height: 42vw;
+    }
+
+
+    #about-us p.up {
+        font-size: 8vw;
+    }
+    
+    #about-us p.down {
+        font-size: 4.5vw;
+    }
+
+    .box-photo {
+        padding: 15px 15px 0px 15px;
+    }
+
+    .review .feedback {
+        width: 65vw;
+        top: -25vw;
+        left: 0;
+    }
+
+    .review .image img {
+        height: 70vw;
+    }
+
+    .feedback .name {
+        font-size: 4.5vw;
+    }
+    .feedback .comment {
+        font-size: 4vw;
+    }
+}
+
+/* Colocar rem apenas nos elementos que vão logo ser alterados, os que forem demorar muito para ser alterado colocar me px */
+
+/* organizar os itens dos media queries */
+
+/* o menu que abre está andando em outro eixo, não está conseguindo o botão menu, parece que tem algo o modificando, porque até mesmo o margin-right não está sendo respeitado*/
