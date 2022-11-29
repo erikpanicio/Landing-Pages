@@ -572,6 +572,10 @@ footer input[type=submit]:hover {
         overflow: scroll;
     }
 
+    .review {
+        margin: 0px 25px;
+    }
+
     .review-buttons {
         display: none;
     }
@@ -802,10 +806,6 @@ footer input[type=submit]:hover {
         width: 65vw;
         top: -25vw;
         left: 0;
-    }
-
-    .review .image img {
-        height: 70vw;
     }
 
     .feedback .name {
