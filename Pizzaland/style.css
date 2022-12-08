@@ -15,6 +15,7 @@
     background-image: url("images/Header.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -150,6 +151,7 @@ p.down {
     border-radius: 10px;
     padding: 7px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .transition-button3 {
@@ -192,7 +194,10 @@ p.down {
 
     .menu {
         display: block;
-        
+    }
+
+    p.down {
+        width: 50vw;
     }
 }
 
@@ -200,6 +205,10 @@ p.down {
     p.up {
         width: 70vw;
         font-size: 13vw;
+    }
+
+    p.down {
+        width: 65vw;
     }
 }
 
