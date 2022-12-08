@@ -17,6 +17,10 @@ var review_button_first = document.getElementsByClassName("review-button first")
 var review_button_second = document.getElementsByClassName("review-button second")[0]
 var review_button_third = document.getElementsByClassName("review-button third")[0]
 
+if(review_button_first.style.backgroundColor == "" && review_button_second.style.backgroundColor == "" && review_button_third.style.backgroundColor == ""){
+    review_button_first.style.backgroundColor = "#7c5912"
+}
+
 function first() {
     box_review1.style.display = "flex"
     box_review2.style.display = "none"
@@ -48,4 +52,16 @@ function third() {
     review_button_second.style.backgroundColor = "#ffffff00"
     review_button_third.style.backgroundColor = "#7c5912"
 
+}
+
+/* TESTE */
+
+while (largura > "1175px"){
+    var largura = screen.width
+}
+
+if (largura <= "1175px"){
+    box_review1.style.display = "none"
+    box_review2.style.display = "none"
+    box_review3.style.display = "none"
 }
