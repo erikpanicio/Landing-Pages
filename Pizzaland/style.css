@@ -12,7 +12,7 @@
 }
 
 .background {
-    background-image: url("images/Header.svg");
+    background-image: url("images/header.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -107,7 +107,7 @@ p.up {
     font-family: 'DM Serif Display', serif;
     font-weight: normal;
     font-size: 80px; /* 65px */
-    margin: 100px 0px 20px 0px;
+    margin: 50px 0px 20px 0px;
 }
 
 p.down {
@@ -129,12 +129,14 @@ p.down {
 }
 
 .buttons .button1 {
+    width: 175px;
     background-color: #FBB403;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 0px 10px 10px 0px;
 }
 
 .buttons .button2 {
+    width: 175px;
     background-color: transparent;
     border: 1px solid white;
     cursor: pointer;
@@ -156,6 +158,20 @@ p.down {
 
 .transition-button3 {
     margin: 0;
+}
+
+#about-us {
+    background-image: url("images/Why\ Choose\ Us.svg");
+    background-size: cover;
+}
+
+#abouth-us .container {
+    justify-content: flex-end;
+}
+
+#about-us .text {
+    width: 50%;
+    justify-content: flex-end;
 }
 
 @media (max-width: 1045px) {
@@ -218,3 +234,6 @@ p.down {
     }
 }
 
+@media (max-width: 355px) {
+
+}
