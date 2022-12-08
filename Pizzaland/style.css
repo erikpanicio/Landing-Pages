@@ -49,7 +49,6 @@ ul {
 
 .header-right li {
     margin-left: 30px;
-    
 }
 
 li {
@@ -62,27 +61,25 @@ a {
 }
 
 a:hover {
-    color: rgba(255, 255, 255, 0.767);
+    color: #ffffffc4;
 }
 
 .phone {
+    display: flex;
+    align-items: center;
     background-color: orange;
     padding: 10px;
     border-radius: 10px;
 }
 
-.phone p {
-    color: white;
-}
-
 .menu {
     display: none;
-    
     border-top: 1px solid white;
     background: none;
     color: white;
     cursor: pointer;
     z-index: 1000;
+    margin-left: 10px;
 }
 
 .menu::after, .menu::before {
@@ -101,8 +98,6 @@ a:hover {
         width: 100%;
         background-color: #1D1D1D;
         position: absolute;
-        /* right: 50vw;
-        left: 50vw; */
         top: 0;
         left: 0;
         flex-direction: column;
@@ -120,12 +115,18 @@ a:hover {
         line-height: 80px;
     }
 
-    /* .header-center a:hover {
+    .header-center a:hover {
         color: white;
     }
- */
+
     .menu {
         display: block;
         
+    }
+}
+
+@media (max-width: 525px) {
+    .phone a {
+        font-size: 2.5vw;
     }
 }
