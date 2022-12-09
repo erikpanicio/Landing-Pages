@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+body {
+
+}
+
 .background {
     background-image: url("images/header.svg");
     background-repeat: no-repeat;
@@ -315,6 +319,7 @@ h3 {
 .box-pizza h4 {
     color: black;
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .box-pizza p {
