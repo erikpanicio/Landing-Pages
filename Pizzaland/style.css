@@ -144,6 +144,7 @@ p.down {
 .transition-buttons {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 .transition-button1, .transition-button2, .transition-button3 {
@@ -173,10 +174,15 @@ p.down {
 
 #about-us .text {
     width: 50%;
-    margin-top: 150px;
+    
 }
 
 h2 {
+    margin: 150px 0px 20px 0px;
+    font-size: 16px;
+}
+
+h3 {
     font-family: 'DM Serif Display', serif;
     font-weight: normal;
     font-size: 45px;
@@ -198,6 +204,59 @@ h2 {
     margin-bottom: 200px;
 }
 
+#service {
+    height: 100vh;
+}
+
+#service h2 {
+    text-align: center;
+    color: #FBB403;
+}
+
+#service h3 {
+    text-align: center;
+}
+
+.informations {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 20px 20px 20px;
+    padding: 0px 20px;
+    border: 3px solid #FBB403;
+    border-radius: 10px;
+    height: 280px;
+    width: 370px;
+}
+
+.information:hover {
+    background-color: #FBB403;
+    color: white;
+}
+
+.information img {
+    height: 60px;
+    width: 60px;
+}
+
+.information h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.information p {
+    text-align: center;
+}
 
 @media (max-width: 1045px) {
     p.up {
@@ -267,6 +326,17 @@ h2 {
     }
 }
 
-@media (max-width: 355px) {
+@media (max-width: 430px) {
+    .information {
+        width: 100%;
+        padding: 0;
+    }
 
+    .information h4 {
+        font-size: 6vw;
+    }
+
+    .information p {
+        font-size: 4vw;
+    }
 }
