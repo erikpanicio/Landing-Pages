@@ -163,7 +163,7 @@ p.down {
     background-image: url("images/about-us.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 45%;
 }
 
 #about-us .container {
@@ -179,11 +179,12 @@ p.down {
 h2 {
     font-family: 'DM Serif Display', serif;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 45px;
 }
 
 #about-us p {
     margin: 20px 0px;
+    color: gray;
 }
 
 .about-us-button {
@@ -239,6 +240,14 @@ h2 {
     p.down {
         width: 50vw;
     }
+
+    #about-us {
+        background-image: url("images/about-us-mobile.svg");
+    }
+
+    #about-us .text {
+        width: 100%;
+    }
 }
 
 @media (max-width: 820px) {
@@ -249,7 +258,7 @@ h2 {
 
     p.down {
         width: 65vw;
-    }
+    } 
 }
 
 @media (max-width: 525px) {
