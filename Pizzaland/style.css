@@ -177,17 +177,6 @@ a:hover {
     
 }
 
-h2 {
-    margin: 150px 0px 20px 0px;
-    font-size: 16px;
-}
-
-h3 {
-    font-family: 'DM Serif Display', serif;
-    font-weight: normal;
-    font-size: 45px;
-}
-
 #about-us p {
     margin: 20px 0px;
     color: gray;
@@ -204,13 +193,18 @@ h3 {
     margin-bottom: 200px;
 }
 
-#service h2 {
+h2 {
     text-align: center;
     color: #FBB403;
+    margin: 150px 0px 20px 0px;
+    font-size: 16px;
 }
 
-#service h3 {
+h3 {
     text-align: center;
+    font-family: 'DM Serif Display', serif;
+    font-weight: normal;
+    font-size: 45px;
 }
 
 .informations {
@@ -254,7 +248,7 @@ h3 {
     text-align: center;
 }
 
-#banner {
+/* #banner {
     background-image: url("images/background_yellow.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -262,7 +256,7 @@ h3 {
     padding: 65px 0px;
 }
 
-#banner .container {
+#banner .banner-information {
     display: flex;
     justify-content: space-between;
 }
@@ -283,6 +277,58 @@ h3 {
     color: white;
     font-size: 20px;
 }
+ */
+
+ .box-pizzas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box-pizza {
+    display: flex;
+    border: 1px dashed gray;
+    border-radius: 20px;
+    width: 560px;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.box-pizza:hover {
+    background-color: rgba(231, 231, 231, 0.699);
+}
+
+.box-pizza .image {
+    background-color: #FBB40326;
+    border-radius: 10px;
+    height: 140px;
+    width: 140px;
+    margin-right: 10px;
+}
+
+.box-pizza img {
+    /* width: 100%; */
+    height: 100%;
+}
+
+.box-pizza h4 {
+    color: black;
+    font-size: 24px;
+}
+
+.box-pizza p {
+    color: #606060;
+}
+
+.box-pizza p.value {
+    color: #FBB403;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 
 @media (max-width: 1045px) {
      #apresentation p.up {
@@ -354,6 +400,12 @@ h3 {
     } 
 }
 
+@media (max-width: 600px) {
+    .box-pizza {
+        width: 100%;
+    }
+}
+
 @media (max-width: 525px) {
     .header-right {
         display: none;
@@ -373,4 +425,18 @@ h3 {
     .information p {
         font-size: 4vw;
     }
+
+    .box-pizza .image {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .box-pizza h4 {
+        font-size: 5vw;
+    }
+
+    .box-pizza p {
+        font-size: 3vw;
+    }
+
 }
