@@ -517,6 +517,13 @@ p.value {
     #apresentation p.down {
         width: 65vw;
     } 
+
+    .box-grid {
+        grid-template-areas: 
+            "item1 item2"
+            "item3 item4"
+            "item5 item6";
+    }
 }
 
 @media (max-width: 600px) {
@@ -528,7 +535,7 @@ p.value {
 @media (max-width: 525px) {
     .header-right {
         display: none;
-    }
+    }  
 }
 
 @media (max-width: 430px) {
@@ -556,6 +563,16 @@ p.value {
 
     .box-pizza p {
         font-size: 3vw;
+    }
+
+    .box-grid {
+        grid-template-areas: 
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6";
     }
 
 }
