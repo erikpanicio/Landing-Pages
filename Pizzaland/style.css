@@ -515,7 +515,8 @@ p.value {
     grid-area: item7;
 }
 
-#reservation input {
+#reservation input, #reservation select {
+    width: 100%;
     border: 1px dashed black;
     padding: 15px;
     font-size: 18px;
@@ -523,12 +524,6 @@ p.value {
 
 #reservation input:last-child {
     border: 0;
-}
-
-#reservation select {
-    border: 1px dashed black;
-    padding: 15px;
-    font-size: 18px;
 }
 
 .reservation-box-time {
