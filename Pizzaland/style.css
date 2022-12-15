@@ -192,7 +192,7 @@ h3 {
     font-family: 'DM Serif Display', serif;
     font-weight: normal;
     font-size: 45px; /* 11vw */
-    margin-bottom: 50px;
+    margin-bottom: 25px; /* 50px */
 }
 
 #about-us h2 {
@@ -666,6 +666,7 @@ p.value {
 
     .reservation-box-time {
         width: 100%;
+        padding: 40px 20px;
     }
 
     .reservation-box-time .day {
