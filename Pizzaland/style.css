@@ -177,7 +177,7 @@ a:hover {
     width: 50%;   
 }
 
-#service, #menu, #shop, #gallery, #testimonial {
+#service, #menu, #shop, #gallery, #testimonial, #reservation {
     margin: 150px 0px 20px 0px;
 }
 
@@ -408,13 +408,15 @@ p.value {
 
 #gallery {
     background-image: url("images/background_gallery.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #gallery .container {
     padding: 100px 0px;
 }
 
-.box-grid {
+.gallery-box-grid {
     display: grid;
     grid-template-areas: 
         "item1 item2 item3"
@@ -445,7 +447,7 @@ p.value {
     grid-area: item6;
 }
 
-.box-grid img {
+.gallery-box-grid img {
     width: 100%;
 }
 
@@ -485,6 +487,91 @@ p.value {
     color: #FBB403;
     text-align: left;
     font-weight: bold;
+}
+
+/* #reservation .container {
+    display: flex;
+} */
+
+.reservation-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.reservation-box-grid {
+    width: 810px;
+    margin: 25px;
+    display: grid;
+    grid-template-areas: 
+        "item1 item2"
+        "item3 item4"
+        "item5 item6"
+        "item7 item7";
+        gap: 20px;
+}
+
+.item7 {
+    grid-area: item7;
+}
+
+#reservation input {
+    border: 1px dashed black;
+    padding: 15px;
+    font-size: 18px;
+}
+
+#reservation input:last-child {
+    border: 0;
+}
+
+#reservation select {
+    border: 1px dashed black;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.reservation-box-time {
+    width: 440px;
+    background-color: #1D1D1D;
+    padding: 40px 40px;
+    border-radius: 20px;
+}
+
+.reservation-box-time h3 {
+    color: white;
+}
+
+.reservation-box-time .time {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.reservation-box-time .day {
+    text-align: left;
+    font-size: 20px;
+    width: 50%;
+    line-height: 50px;
+}
+
+.reservation-box-time .day p {
+    border-bottom: 1px dashed gray;
+}
+
+.reservation-box-time .hour {
+    text-align: right;
+    font-size: 20px;
+    width: 50%;
+    line-height: 50px;
+}
+
+.reservation-box-time .hour p {
+    border-bottom: 1px dashed gray;
+}
+
+.reservation-box-time button {
+    /* margin: 20px 95px; */
 }
 
 @media (max-width: 1045px) {
@@ -537,13 +624,10 @@ p.value {
         width: 100%;
     }
 
-    /* .banner-information p.up {
-        font-size: 5vw;
+    .reservation-box-grid {
+        width: 100%;
+        margin: 25px 0px;
     }
-    
-    .banner-information p.down {
-        font-size: 2vw;
-    } */
 }
 
 @media (max-width: 820px) {
@@ -556,7 +640,7 @@ p.value {
         width: 65vw;
     } 
 
-    .box-grid {
+    .gallery-box-grid {
         grid-template-areas: 
             "item1 item2"
             "item3 item4"
@@ -567,6 +651,29 @@ p.value {
 @media (max-width: 600px) {
     .box-pizza {
         width: 100%;
+    }
+
+    .reservation-box-grid {
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7";
+    }
+
+    .reservation-box-time {
+        width: 100%;
+    }
+
+    .reservation-box-time .day {
+        font-size: 4vw;
+    }
+
+    .reservation-box-time .hour {
+        font-size: 4vw;
     }
 }
 
@@ -603,7 +710,7 @@ p.value {
         font-size: 3vw;
     }
 
-    .box-grid {
+    .gallery-box-grid {
         grid-template-areas: 
             "item1"
             "item2"

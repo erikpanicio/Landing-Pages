@@ -256,7 +256,7 @@
         <div class="container">
             <h2>Gallery</h2>
             <h3>Our Seen Best Gallery</h3>
-            <div class="box-grid">
+            <div class="gallery-box-grid">
                 <div class="item item1"><img src="images/gallery-1.png" alt=""></div>
                 <div class="item item2"><img src="images/gallery-2.png" alt=""></div>
                 <div class="item item3"><img src="images/gallery-3.png" alt=""></div>
@@ -295,6 +295,53 @@
                         <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit felis. Vestibulum convallis ipsum.</p>
                     </div>
                     <a href="#">Read More &#x27A1;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="contents">
+        <div class="container">
+            <h2>Reservation</h2>
+            <h3>Our Special Pizza Menu</h3>
+            <!-- tentar sem grid, se não conseguir fazer os itens do input com grid e a outra divisão com flex -->
+            <div class="reservation-box">
+                <form action="" class="reservation-box-grid">
+                    <input class="item1" type="text" name="name" placeholder="Name">
+                    <input class="item2" type="email" name="email" id="" placeholder="Email">
+                    <input class="item3" type="text" name="phone" placeholder="Phone">
+                    <input class="item4" type="time" name="time" id="" placeholder="Time">
+                    <select class="item5" name="seats" id="">
+                        <option value="seats-1">1</option>
+                        <option value="seats-2">2</option>
+                        <option value="seats-3">3</option>
+                        <option value="seats-4">4</option>
+                    </select>
+                    <input class="item6" type="date" name="date" id="" placeholder="Date">
+                    <input class="item7" type="text" name="text" id="" placeholder="Additional Information">
+                    <input class="button" type="submit" value="Book Now">
+                </form>
+                
+                <div class="reservation-box-time">
+                    <h2>Reservation</h2>
+                    <h3>Book Your Table</h3>
+                    <div class="time">
+                        <div class="day">
+                            <p>Mon - Tue</p>
+                            <p>Wed - Thur</p>
+                            <p>Friday</p>
+                            <p>Sat - Sun</p>
+                        </div>
+                        <div class="hour">
+                            <p>07:00 AM - 02:00 PM</p>
+                            <p>06:00 AM - 01:00 PM</p>
+                            <p>Closed</p>
+                            <p>07:30 AM - 04:00 PM</p>
+                        </div>
+                    </div>
+                    <button class="button">
+                        <img src="images/phone.svg" alt=""><a href="#">+1123 456 789</a>
+                    </button>
                 </div>
             </div>
         </div>
