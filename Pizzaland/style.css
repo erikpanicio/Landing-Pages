@@ -177,7 +177,7 @@ a:hover {
     width: 50%;   
 }
 
-#service, #menu, #shop, #gallery, #testimonial, #reservation {
+#service, #menu, #shop, #gallery, #testimonial, #reservation, #news-letter {
     margin: 150px 0px 20px 0px;
 }
 
@@ -569,9 +569,54 @@ p.value {
     /* margin: 20px 95px; */
 }
 
+#news-letter {
+    background-image: url("images/news-letter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#news-letter.contents {
+    /* justify-content: flex-start; */
+}
+
+#news-letter .container {
+    padding: 100px 0px;
+}
+
+#news-letter h2 {
+    color: white;
+    font-size: 45px;
+    text-align: left;
+}
+
+#news-letter p {
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    margin: 30px 0px;
+}
+
+#news-letter input {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
 @media (max-width: 1045px) {
      #apresentation p.up {
         width: 50vw;
+    }
+
+    #news-letter p {
+        width: 100%;
+    }
+    
+    #news-letter input {
+        width: 100%;
     }
 }
 
@@ -623,6 +668,8 @@ p.value {
         width: 100%;
         margin: 25px 0px;
     }
+
+    
 }
 
 @media (max-width: 820px) {

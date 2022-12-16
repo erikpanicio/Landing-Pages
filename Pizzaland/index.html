@@ -310,12 +310,26 @@
                     <input class="item1" type="text" name="name" placeholder="Name">
                     <input class="item2" type="email" name="email" id="" placeholder="Email">
                     <input class="item3" type="text" name="phone" placeholder="Phone">
-                    <input class="item4" type="time" name="time" id="" placeholder="Time">
+                    <!-- <input class="item4" type="time" name="time" id=""> -->
+
+                    <!-- alterar os valores com JS baseado em cada dia da semana -->
+                    <select class="item4" name="time" id="">
+                        <optgroup label="time">
+                            <option>Time</option>
+                            <option value="time-1">1</option>
+                            <option value="time-2">2</option>
+                            <option value="time-3">3</option>
+                            <option value="time-4">4</option>
+                        </optgroup>
+                    </select>
                     <select class="item5" name="seats" id="">
-                        <option value="seats-1">1</option>
-                        <option value="seats-2">2</option>
-                        <option value="seats-3">3</option>
-                        <option value="seats-4">4</option>
+                        <optgroup label="Seats">
+                            <option>Seats</option>
+                            <option value="seats-1">1</option>
+                            <option value="seats-2">2</option>
+                            <option value="seats-3">3</option>
+                            <option value="seats-4">4</option>
+                        </optgroup>
                     </select>
                     <input class="item6" type="date" name="date" id="" placeholder="Date">
                     <input class="item7" type="text" name="text" id="" placeholder="Additional Information">
@@ -344,6 +358,14 @@
                     </button>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="news-letter" class="contents">
+        <div class="container">
+            <h2>Subscribe News Letter for Ger Update</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi earum veniam soluta quaerat sint inventore, quae molestiae eaque ab aperiam autem ea.</p>
+            <input type="email" name="email" id="email" placeholder="Enter Your Mail">
         </div>
     </section>
     <script src="script.js"></script>
