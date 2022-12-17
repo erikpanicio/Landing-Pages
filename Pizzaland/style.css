@@ -177,7 +177,7 @@ a:hover {
     width: 50%;   
 }
 
-#service, #menu, #shop, #gallery, #testimonial, #reservation, #news-letter {
+#service, #menu, #shop, #gallery, #testimonial, #reservation {
     margin: 150px 0px 20px 0px;
 }
 
@@ -238,6 +238,10 @@ h3 {
     color: white;
 }
 
+.information:hover h4 {
+    color: white;
+}
+
 .information img {
     height: 60px;
     width: 60px;
@@ -253,7 +257,7 @@ h3 {
     text-align: center;
 }
 
-/* #banner {
+#banner {
     background-image: url("images/background_banner.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -261,16 +265,22 @@ h3 {
     padding: 65px 0px;
 }
 
-#banner .banner-information {
+#banner .container {
     display: flex;
     justify-content: space-between;
 }
 
-.banner-information {
+#banner .banner-information {
+    margin: 0px 10px;
+    text-align: center;
 }
 
-.banner-information p {
-    text-align: center;
+#banner .banner-information:first-child {
+    margin-left: 0;
+}
+
+#banner .banner-information:last-child {
+    margin-right: 0;
 }
 
 .banner-information p.up {
@@ -282,12 +292,11 @@ h3 {
     color: white;
     font-size: 20px;
 }
- */
 
  .box-pizzas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .box-pizza {
@@ -565,14 +574,20 @@ p.value {
     border-bottom: 1px dashed gray;
 }
 
+.reservation-box-time .box-button {
+    width: 100%;
+    display: flex;
+}
+
 .reservation-box-time button {
-    /* margin: 20px 95px; */
+    margin: 20px auto auto auto;
 }
 
 #news-letter {
     background-image: url("images/news-letter.png");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 150px 0px 00px 0px;
 }
 
 #news-letter.contents {
@@ -605,6 +620,82 @@ p.value {
     font-size: 16px;
 }
 
+footer {
+    background-color: #1D1D1D;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 0px;
+}
+
+.footer-left {
+    width: 358px;
+    /* margin: 0px 20px 20px 0px; */
+}
+
+.footer-left p {
+    color: white;
+    line-height: 30px;
+    margin: 20px 0px;
+    font-size: 18px;
+}
+
+footer .social {
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+footer .social:hover {
+    background-color: #FBB403;
+}
+
+.footer-center {
+    width: 332px;
+    /* margin: 0px 20px 20px 20px; */
+}
+
+.footer-center h2, .footer-right h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-center .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-center .images img{
+    margin: 10px 0px;
+}
+
+.footer-right {
+    width: 281px;
+    /* margin: 0px 0px 20px 20px; */
+}
+
+.footer-right p {
+    font-size: 18px;
+    color: gray;
+    line-height: 40px;
+}
+
+.footer-right strong {
+    color: white;
+    font-size: 20px;
+}
+
+@media (max-width: 1240px) {
+    .box-pizzas {
+        justify-content: center;
+    }
+}
 
 @media (max-width: 1045px) {
      #apresentation p.up {
@@ -652,7 +743,7 @@ p.value {
         display: block;
     }
 
-    p.down {
+    #apresentation p.down {
         width: 50vw;
     }
 
@@ -687,6 +778,20 @@ p.value {
             "item1 item2"
             "item3 item4"
             "item5 item6";
+    }
+}
+
+@media (max-width: 760px) {
+    .footer-left, .footer-right {
+        margin: 40px 0px;
+    } 
+
+    .banner-information p.up {
+        font-size: 7.5vw;
+    }
+
+    .banner-information p.down {
+        font-size: 2.8vw;
     }
 }
 
