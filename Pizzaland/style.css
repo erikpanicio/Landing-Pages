@@ -704,7 +704,7 @@ footer .social:hover {
         left: 0;
         flex-direction: column;
         font-size: 50px;
-        padding-top: 10vh;
+        padding-top: 10vh; /* 100px */
     }
 
     .header-center li {
@@ -831,6 +831,22 @@ footer .social:hover {
 
     .reservation-box-time .hour {
         font-size: 4vw;
+    }
+
+    .footer-left {
+        text-align: center;
+    }
+    .footer-center {
+        text-align: center;
+    }
+    .footer-center h2, .footer-right h2 {
+        text-align: center;
+    }
+    .footer-center .images {
+        justify-content: center;
+    }
+    .footer-right {
+        text-align: center;
     }
 }
 
