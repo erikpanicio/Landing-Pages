@@ -16,12 +16,12 @@
                         <li><a href="#"><img src="images/logo.svg" alt=""></a></li>
                     </div>
                     <div class="header-center">
-                        <li><a href="#about-us">About</a></li>
-                        <li><a href="#service">Service</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#shop">Shop</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about-us" onclick="menu_clicado()">About</a></li>
+                        <li><a href="#service" onclick="menu_clicado()">Service</a></li>
+                        <li><a href="#menu" onclick="menu_clicado()">Menu</a></li>
+                        <li><a href="#shop" onclick="menu_clicado()">Shop</a></li>
+                        <li><a href="#" onclick="menu_clicado()">Blog</a></li>
+                        <li><a href="#" onclick="menu_clicado()">Contact</a></li>
                     </div>
                     <div class="header-right">
                         <li><a href="#"><img src="images/search.svg" alt=""></a></li>
@@ -169,10 +169,12 @@
         </div>
     </section>
 
-    <!-- <section id="shop" class="contents">
+    <section id="shop" class="contents">
         <div class="container">
             <h2>Shop</h2>
             <h3>Our Regular Food Collections</h3>
+            <button class="arrow-left" onclick="shop_button_left()"></button>
+            <button class="arrow-right" onclick="shop_button_right()"></button>
             <div class="shop-pizzas">
                 <div class="shop-pizza">
                     <div class="pizza pizza1">
@@ -250,7 +252,55 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
+
+    <section id="team" class="contents">
+        <div class="container">
+            <h2>Team</h2>
+            <h3>Our Master Chef</h3>
+            <div class="box-chefs">
+                <div class="box-chef">
+                    <img src="images/chef1.png" alt="">
+                    <div class="information" onmouseenter="show_social1()" onmouseout="hidden_social1()">
+                        <p class="up">Joe Root</p>
+                        <p class="down">Assistant Chef</p>
+                        <div class="images images1">
+                            <a href="#"><img src="images/icon-skype.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-twiiter-white.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-whatsapp.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-facebook.svg" class="social" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-chef">
+                    <img src="images/chef2.png" alt="">
+                    <div class="information" onmouseenter="show_social2()" onmouseout="hidden_social2()">
+                        <p class="up">Eion Morgan</p>
+                        <p class="down">Head of Chef</p>
+                        <div class="images images2">
+                            <a href="#"><img src="images/icon-skype.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-twiiter-white.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-whatsapp.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-facebook.svg" class="social" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-chef">
+                    <img src="images/chef3.png" alt="">
+                    <div class="information" onmouseenter="show_social3()" onmouseout="hidden_social3()">
+                        <p class="up">Tamin Lqbal</p>
+                        <p class="down">Interal Chef</p>
+                        <div class="images images3">
+                            <a href="#"><img src="images/icon-skype.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-twiiter-white.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-whatsapp.svg" class="social" alt=""></a>
+                            <a href="#"><img src="images/icon-facebook.svg" class="social" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="gallery" class="contents">
         <div class="container">
