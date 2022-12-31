@@ -132,7 +132,7 @@ a:hover {
 
 .buttons .button1 {
     width: 175px;
-    margin: 0px 10px 10px 0px;
+    margin-right: 10px;
 }
 
 .buttons .button2 {
@@ -208,14 +208,14 @@ h3 {
     color: gray;
 }
 
-.informations {
+#service .informations {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
 }
 
-.information {
+#service .information {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,27 +229,27 @@ h3 {
     width: 370px;
 }
 
-.information:hover {
+#service .information:hover {
     background-color: #FBB403;
     color: white;
 }
 
-.information:hover h4 {
+#service .information:hover h4 {
     color: white;
 }
 
-.information img {
+#service .information img {
     height: 60px;
     width: 60px;
 }
 
-.information h4 {
+#service .information h4 {
     font-family: 'DM Serif Display', serif;
     font-size: 24px;
     text-align: center;
 }
 
-.information p {
+#service .information p {
     text-align: center;
 }
 
@@ -362,15 +362,50 @@ p.value {
 }
 
 .shop-pizza {
-    width: 3690px;
+    margin-left: 0; /* -840px talvez todos sejam esse */ /* 0 */ /* 839px */ /* 1677px */ /* 2517px */
+}
+
+.arrow-left {
+    background-image: url("images/arrow-left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    left: -75px;
+    top: 300px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.arrow-left:hover {
+    background-image: url("images/arrow-left2.png");
+}
+
+.arrow-right {
+    background-image: url("images/arrow-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    left: 96%;
+    top: 300px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.arrow-right:hover {
+    background-image: url("images/arrow-right2.png");
+}
+
+
+.shop-pizza {
+    width: auto; /* 3690px */
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .pizza {
     width: 370px;
-    margin: 20px;
+    margin: 25px; /* 20px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -407,6 +442,59 @@ p.value {
 
 .pizza p.value {
     margin: 20px 0px;
+}
+
+#team {
+
+}
+
+.box-chefs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-chef {
+    width: 370px;
+    /* background-color: #fbb50336; */
+}
+
+#team .information {
+    background-color: #fbb5032c;
+    padding: 20px;
+}
+
+#team .information:hover {
+    background-color: #fbb503;
+    height: 150px;
+    color: white;
+}
+
+#team .information p.up {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#team .information p.down {
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+}
+
+#team .images {
+    display: none;
+    text-align: center;
+}
+
+.social {
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social:hover {
+    background-color: white;
 }
 
 #gallery {
@@ -577,11 +665,12 @@ p.value {
     background-image: url("images/news-letter.png");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 150px 0px 00px 0px;
+    background-position: center;
+    margin: 150px 0px 0px 0px;
 }
 
 #news-letter .container {
-    padding: 100px 0px;
+    padding: 120px 0px;
 }
 
 #news-letter h2 {
@@ -626,12 +715,6 @@ footer .container {
     line-height: 30px;
     margin: 20px 0px;
     font-size: 18px;
-}
-
-footer .social {
-    background-color: #333333;
-    padding: 10px;
-    border-radius: 50%;
 }
 
 footer .social:hover {
@@ -699,6 +782,7 @@ footer .social:hover {
         height: 100%;
         width: 100%;
         background-color: #1D1D1D;
+        /* transition: all 5s linear; */
         position: absolute;
         top: 0;
         left: 0;
@@ -745,13 +829,20 @@ footer .social:hover {
 
 @media (max-width: 820px) {
     #apresentation p.up {
-        width: 70vw;
-        font-size: 13vw;
+        width: 100%;
+        font-size: 12vw;
+        text-align: center;
     }
 
     #apresentation p.down {
-        width: 65vw;
-    } 
+        width: 100%;
+        text-align: center;
+    }
+
+    #apresentation .buttons {
+        display: flex;
+        justify-content: center;
+    }
 
     .gallery-box-grid {
         grid-template-areas: 
@@ -857,16 +948,16 @@ footer .social:hover {
 }
 
 @media (max-width: 430px) {
-    .information {
+    #service .information {
         width: 100%;
         padding: 0;
     }
 
-    .information h4 {
+    #service .information h4 {
         font-size: 6vw;
     }
 
-    .information p {
+    #service .information p {
         font-size: 4vw;
     }
 
@@ -901,3 +992,17 @@ footer .social:hover {
         width: 100%;
     }
 }
+
+@media (max-width: 380px) {
+    .button.button1 {
+        width: 100%;
+        font-size: 3.5vw;
+    }
+
+    .button.button2 {
+        width: 100%;
+        font-size: 3.5vw;
+    }
+}
+
+/* criar as partes que estão faltando e deixá-las responsivas, estudar JS e deixar o botões funcionais logo em seguida */
