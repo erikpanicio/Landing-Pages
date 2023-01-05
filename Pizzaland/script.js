@@ -1,6 +1,10 @@
 var num = 0
+var clique = 0
+var total = 0
 
 var header_center = document.getElementsByClassName("header-center")[0]
+var shop_pizza = document.getElementsByClassName("shop-pizza")[0]
+var pizza = document.querySelectorAll("div.pizza").length /* estou contando quantas class pizza existem */
 
 function clicked() {
     header_center.style.display = "flex"
@@ -19,13 +23,33 @@ function menu_clicado() {
 }
 
 function shop_button_left() {
-    var shop_pizza = document.getElementsByClassName("shop-pizza")[0]
-    shop_pizza.style.marginRight = "0"
+    buttonLeft()
+
+    function buttonLeft() {
+        if (clique == -(pizza)/3) {/* para saber quando o usuário não pode mais passar para o lado , criei essa fórmula, se o número de pizzas for sempre par irá sempre funcionar*/
+
+        }
+        else {
+            total += -840
+            shop_pizza.style.marginRight = total + "px"
+            clique += -1
+        }
+    }
 }
 
 function shop_button_right() {
-    var shop_pizza = document.getElementsByClassName("shop-pizza")[0]
-    shop_pizza.style.marginRight = "840px"
+    buttonRight()
+
+    function buttonRight() {
+        if (clique == (pizza)/3) {
+                
+        }
+        else {
+            total += 840
+            shop_pizza.style.marginRight = total + "px"
+            clique += 1
+        }
+    }
 }
 
 function show_social1() {
