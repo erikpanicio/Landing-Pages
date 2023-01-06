@@ -794,10 +794,6 @@ footer .social:hover {
         align-items: flex-start;
     }
 
-    .shop-pizza { /* TIRAR */
-        /* margin-left: 2520px; */
-    }
-
     .shop-pizzas::-webkit-scrollbar-thumb {
         background-color: #333333;
         border-radius: 10px;
@@ -808,22 +804,7 @@ footer .social:hover {
         height: 8px;
     }
 
-    .pizza {
-        width: 27.2vw;;
-    }
-
-    .pizza img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .pizza h4 {
-        font-size: 2vw;
-    }
-
-    .pizza p {
-        font-size: 1.2vw;
-    }
+    
 }
 
 @media (max-width: 1240px) {
@@ -1014,6 +995,23 @@ footer .social:hover {
 @media (max-width: 525px) {
     .header-right {
         display: none;
+    }
+
+    .pizza {
+        width: 70vw;
+    }
+
+    .pizza img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pizza h4 {
+        font-size: 5vw;
+    }
+
+    .pizza p {
+        font-size: 3.5vw;
     }
 }
 
