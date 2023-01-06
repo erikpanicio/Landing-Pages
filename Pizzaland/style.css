@@ -789,7 +789,7 @@ footer .social:hover {
     }
 
     .shop-pizzas {
-        width: 95vw;
+        width: 95vw; /* 100vw */
         overflow-x: scroll;
         align-items: flex-start;
     }
@@ -804,9 +804,8 @@ footer .social:hover {
         height: 8px;
     }
 
-    /* tirar */
     .pizza {
-        width: 25vw;
+        width: 28vw;
     }
 
     .pizza img {
@@ -815,12 +814,14 @@ footer .social:hover {
     }
 
     .pizza h4 {
-        font-size: 1.8vw;
+        font-size: 2vw;
     }
 
     .pizza p {
-        font-size: 1.2vw;
+        font-size: 1.3vw;
     }
+
+    
 }
 
 @media (max-width: 1240px) {
@@ -834,22 +835,16 @@ footer .social:hover {
         width: 50vw;
     }
 
-    /* tirar */
     .pizza {
         width: 35vw;
     }
 
-    .pizza img {
-        width: 100%;
-        height: 100%;
-    }
-
     .pizza h4 {
-        font-size: 2.5vw;
+        font-size: 2.3vw;
     }
 
     .pizza p {
-        font-size: 1.8vw;
+        font-size: 1.5vw;
     }
 
     #news-letter p {
@@ -929,37 +924,12 @@ footer .social:hover {
         justify-content: center;
     }
 
-    /* 
-    
-        .pizza {
-        width: 35vw;
-    }
-
-    .pizza img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .pizza h4 {
-        font-size: 2.5vw;
-    }
-
-    .pizza p {
-        font-size: 1.8vw;
-    }
-    */
-
     .pizza {
-        width: 40vw;
-    }
-
-    .pizza img {
-        width: 100%;
-        height: 100%;
+        width: 50vw;
     }
 
     .pizza h4 {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .pizza p {
