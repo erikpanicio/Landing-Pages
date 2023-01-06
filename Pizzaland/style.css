@@ -376,7 +376,6 @@ p.value {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* overflow-x: scroll; */
     /* cursor: grab; */
     overflow-x: hidden;
 }
@@ -536,6 +535,12 @@ p.value {
 
 .item {
     text-align: center;
+}
+
+.item:hover {
+    visibility: visible;
+    opacity: 20%;
+    transition: opacity 1s;
 }
 
 .item1 {
@@ -779,12 +784,18 @@ footer .social:hover {
 }
 
 @media (max-width: 1360px) {
+    .arrow-left, .arrow-right {
+        display: none;
+    }
+
     .shop-pizzas {
+        width: 95vw; /* 100vw */
         overflow-x: scroll;
+        align-items: flex-start;
     }
 
     .shop-pizza { /* TIRAR */
-        margin-left: 2520px;
+        /* margin-left: 2520px; */
     }
 
     .shop-pizzas::-webkit-scrollbar-thumb {
@@ -798,7 +809,7 @@ footer .social:hover {
     }
 
     .pizza {
-        width: 27.2vw;
+        width: 27.2vw;;
     }
 
     .pizza img {
@@ -806,12 +817,8 @@ footer .social:hover {
         height: 100%;
     }
 
-    .pizza button {
-        display: none;
-    }
-
     .pizza h4 {
-        font-size: 2vw; /* 2vw = 28px */
+        font-size: 2vw;
     }
 
     .pizza p {
@@ -1057,10 +1064,6 @@ footer .social:hover {
 }
 
 @media (max-width: 380px) {
-    #apresentation .buttons {
-        margin-top: 50%;
-    }
-
     .button.button1 {
         width: 100%;
         font-size: 3.5vw;
