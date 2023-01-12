@@ -52,32 +52,32 @@ function shop_button_right() {
     }
 }
 
+/* Section Team */
+
+var social1 = document.querySelector("#team .images1")
+var social2 = document.querySelector("#team .images2")
+var social3 = document.querySelector("#team .images3")
+
 function show_social1() {
-    var show_social1 = document.querySelector("#team .images1")
-    show_social1.style.display = "block"
+    social1.style.display = "block"
 }
 
 function show_social2() {
-    var show_social2 = document.querySelector("#team .images2")
-    show_social2.style.display = "block"
+    social2.style.display = "block"
 }
 
 function show_social3() {
-    var show_social3 = document.querySelector("#team .images3")
-    show_social3.style.display = "block"
+    social3.style.display = "block"
 }
 
 function hidden_social1() {
-    var hidden_social1 = document.querySelector("#team .images1")
-    hidden_social1.style.display = "none"
+    social1.style.display = "none"
 }
 
 function hidden_social2() {
-    var hidden_social2 = document.querySelector("#team .images2")
-    hidden_social2.style.display = "none"
+    social2.style.display = "none"
 }
 
 function hidden_social3() {
-    var hidden_social3 = document.querySelector("#team .images3")
-    hidden_social3.style.display = "none"
+    social3.style.display = "none"
 }

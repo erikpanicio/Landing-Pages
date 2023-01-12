@@ -190,7 +190,7 @@ a:hover {
     width: 50%;   
 }
 
-#service, #menu, #shop, #gallery, #testimonial, #reservation {
+#service, #menu, #shop, #gallery, #testimonial, #reservation, #team {
     margin: 150px 0px 20px 0px;
 }
 
@@ -425,6 +425,7 @@ p.value {
     background-color: white;
     width: 370px;
     margin: 25px; /* 20px */
+    /* height: 533px; 41.5vw */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -450,30 +451,34 @@ p.value {
     padding: 0px 20px;
 }
 
-.pizza p { /* Ver. Arrumar para que se tiver mais texto do que caiba, ele não quebre */
-    /* height: 20%; */
+.pizza p.desc { /* Ver. Arrumar para que se tiver mais texto do que caiba, ele não quebre */
+    /* height: 51px; */
+    font-size: 16px; /* usar REM */
     color: #606060;
     text-align: center;
 }
 
 .pizza p.value {
+    height: 50px;
     font-family: 'DM Serif Display', serif;
     color: #FBB403;
-    margin: 20px 0px;
-}
-
-#team {
-
+    /* margin-top: 20px; */ /* 10px 0px 20px 0px */
 }
 
 .box-chefs {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
 }
 
 .box-chef {
-    width: 370px;
+    width: 65%;
+    margin: 10px;
     /* background-color: #fbb50336; */
+}
+
+.box-chef > img {
+    width: 100%;
 }
 
 #team .information {
@@ -483,7 +488,6 @@ p.value {
 
 #team .information:hover {
     background-color: #fbb503;
-    height: 150px;
     color: white;
 }
 
@@ -503,6 +507,7 @@ p.value {
 #team .images {
     display: none;
     text-align: center;
+    margin-top: 10px;
 }
 
 .social {
@@ -795,19 +800,18 @@ footer .social:hover {
     }
 
     .shop-pizzas::-webkit-scrollbar-thumb {
-        background-color: #333333;
+        background-color: #474747;
         border-radius: 10px;
     }
     
     .shop-pizzas::-webkit-scrollbar {
         background-image: url("images/background-shop.svg");
-        height: 8px;
+        height: 10px;
     }
 
-
-    /* 
     .pizza {
-        width: 20vw;
+        width: 28vw; /* width: 370px; */
+        /* height: 41.5vh; */
     }
 
     .pizza img {
@@ -819,10 +823,9 @@ footer .social:hover {
         font-size: 2vw;
     }
 
-    .pizza p {
+    .pizza p.desc {
         font-size: 1.3vw;
     }
-    */
 
     
 }
@@ -842,17 +845,12 @@ footer .social:hover {
         width: 35vw;
     }
 
-    .pizza img {
-        width: 100%;
-        height: 100%;
-    }
-
     .pizza h4 {
         font-size: 2.3vw;
     }
 
-    .pizza p {
-        font-size: 1.5vw;
+    .pizza p.desc {
+        font-size: 1.6vw;
     }
 
     #news-letter p {
@@ -933,15 +931,15 @@ footer .social:hover {
     }
 
     .pizza {
-        width: 50vw;
+        width: 45vw;
     }
 
     .pizza h4 {
         font-size: 3.5vw;
     }
 
-    .pizza p {
-        font-size: 2.3vw;
+    .pizza p.desc {
+        font-size: 2.2vw;
     }
 
     .gallery-box-grid {
@@ -949,6 +947,10 @@ footer .social:hover {
             "item1 item2"
             "item3 item4"
             "item5 item6";
+    }
+
+    .box-chefs {
+        flex-wrap: wrap;
     }
 }
 
@@ -999,26 +1001,7 @@ footer .social:hover {
     .box-pizza {
         width: 100%;
     }
-
-    /* .pizza {
-        width: 50vw;
-    }
-
-    .pizza img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .pizza h4 {
-        font-size: 4vw;
-    }
-
-    .pizza p {
-        font-size: 2.5vw;
-    } */
-
-    
-
+   
     .reservation-box-grid {
         grid-template-areas: 
         "item1"
@@ -1073,7 +1056,7 @@ footer .social:hover {
         font-size: 5.5vw;
     }
 
-    .pizza p {
+    .pizza p.desc {
         font-size: 3.5vw;
     }
 }
@@ -1134,33 +1117,16 @@ footer .social:hover {
         width: 100%;
         font-size: 3.5vw;
     }
+
+    #team .information p.up {
+        font-size: 7vw;
+    }
+
+    #team .information p.down {
+        font-size: 4vw;
+    }
 }
 
 /* criar as partes que estão faltando e deixá-las responsivas, estudar JS e deixar o botões funcionais logo em seguida */
 
 /* place-items para centralizar um item dentro do outro */
-
-/* 
-500px
-
-/* 
-    
-    .pizza {
-        width: 70vw;
-    }
-
-    .pizza img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .pizza h4 {
-        font-size: 5vw;
-    }
-
-    .pizza p {
-        font-size: 3.5vw;
-    }
-
-    */
-*/
