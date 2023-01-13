@@ -473,8 +473,9 @@ p.value {
 
 .box-chef {
     width: 65%;
+    height: 80%; /* para impedir que o fundo "vaze" quando aparecer o .images */
     margin: 10px;
-    /* background-color: #fbb50336; */
+    background-color: #fbb5031a;
 }
 
 .box-chef > img {
@@ -501,7 +502,6 @@ p.value {
 #team .information p.down {
     text-align: center;
     font-size: 16px;
-    color: gray;
 }
 
 #team .images {
@@ -514,10 +514,12 @@ p.value {
     background-color: #333333;
     padding: 10px;
     border-radius: 50%;
+    width: 38px;
+    height: 38px;
 }
 
 .social:hover {
-    background-color: white;
+    filter: opacity(0.4) drop-shadow(0 0 0 orange); 
 }
 
 #gallery {
@@ -952,6 +954,10 @@ footer .social:hover {
     .box-chefs {
         flex-wrap: wrap;
     }
+
+    #team .images {
+        display: block !important;
+    }
 }
 
 @media (max-width: 725px) {
@@ -1086,6 +1092,10 @@ footer .social:hover {
 
     .box-pizza p {
         font-size: 3vw;
+    }
+
+    .box-chef {
+        width: 90%;
     }
 
     .gallery-box-grid {
