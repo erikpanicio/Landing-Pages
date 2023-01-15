@@ -476,28 +476,23 @@ p.value {
 .box-chefs {
     display: flex;
     justify-content: space-between;
-    justify-content: center;
-    /* margin-bottom: 52px; */ /* fazer com que não haja aquele pulinho */
-    /* 148-96 = 52px */
-    height: 586px; /* arrumar */
-}
-
-
-.box-chef {
-    width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
-    margin: 10px;
     
 }
 
-.teste {
+.box-chef {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.box-chef-background {
+    width: 100%;
     background-color: #fbb5031a;
     text-align: center;
 }
 
-.teste > img {
+.box-chef-background > img {
     width: 100%;
 }
 
@@ -874,6 +869,14 @@ footer .social:hover {
         font-size: 1.6vw;
     }
 
+    .box-chefs {
+        flex-wrap: wrap;
+    }
+
+    .box-chef-background {
+        width: 50%;
+    }
+
     #news-letter p {
         width: 100%;
     }
@@ -970,10 +973,6 @@ footer .social:hover {
             "item5 item6";
     }
 
-    .box-chefs {
-        flex-wrap: wrap;
-    }
-
     #team .images {
         display: block !important;
     }
@@ -998,6 +997,10 @@ footer .social:hover {
 }
 
 @media (max-width: 652px) {
+    .box-chef-background {
+        width: 100%;
+    }
+
     footer .container {
         justify-content: center;
     }
