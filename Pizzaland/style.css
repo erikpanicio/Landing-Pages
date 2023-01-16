@@ -941,7 +941,7 @@ footer .social:hover {
 
     .header-center a {
         color: orange; /* rgb(184, 112, 70) */
-        line-height: 100px;
+        line-height: 80px;
     }
 
     .header-center a:hover {
