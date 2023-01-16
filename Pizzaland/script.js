@@ -52,6 +52,10 @@ function shop_button_right() {
     }
 }
 
+/* Passar automático */
+
+
+
 /* Section Team */
 
 var social1 = document.querySelector("#team .images1")
