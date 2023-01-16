@@ -125,16 +125,22 @@ a:hover {
     font-weight: normal;
     font-size: 80px; /* 65px */
     margin: 50px 0px 0px 0px;
+    text-shadow: 1px 1px 1px black;
 }
 
 #apresentation p.down {
     color: white;
     width: 30%;
     margin: 20px 0px;
+    text-shadow: 1px 1px 1px black;
 }
 
-.buttons {
+#apresentation .buttons {
     margin-bottom: 200px;
+}
+
+#apresentation .button {
+    text-shadow: 1px 1px 1px black;
 }
 
 .button {
@@ -150,12 +156,14 @@ a:hover {
 .buttons .button1 {
     width: 175px;
     margin-right: 10px;
+    box-shadow: 0px 0px 5px black;
 }
 
 .buttons .button2 {
     width: 175px;
     background-color: transparent;
     border: 1px solid white;
+    box-shadow: 0px 0px 5px black;
 }
 
 .transition-buttons {
@@ -183,7 +191,7 @@ a:hover {
 }
 
 #about-us {
-    background-image: url("images/background-about-us.svg");
+    background-image: url("images/background-about-us.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 45%;
@@ -207,6 +215,7 @@ h2 {
     text-align: center;
     color: #FBB403;
     font-size: 16px;
+    /* margin-top: 20px; */
 }
 
 h3 {
@@ -756,6 +765,7 @@ footer .container {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 100px 0px;
+    gap: 30px;
 }
 
 .footer-left {
@@ -909,7 +919,9 @@ footer .social:hover {
 @media (max-width: 925px){
     .header-center {
         display: none;
-        height: 100%;
+        /* justify-content: center; */
+        /* dar um jeito de deixa o height com 100% sem possibilitar mostrar algo fora do menu */
+        height: 108%;
         width: 100%;
         background-color: #1D1D1D;
         /* transition: all 5s linear; */
@@ -917,8 +929,9 @@ footer .social:hover {
         top: 0;
         left: 0;
         flex-direction: column;
-        font-size: 50px;
+        font-size: 60px;
         padding-top: 10vh; /* 100px */
+        z-index: 1000;
     }
 
     .header-center li {
@@ -928,7 +941,7 @@ footer .social:hover {
 
     .header-center a {
         color: orange; /* rgb(184, 112, 70) */
-        line-height: 80px;
+        line-height: 100px;
     }
 
     .header-center a:hover {
@@ -995,14 +1008,6 @@ footer .social:hover {
 }
 
 @media (max-width: 725px) {
-    .footer-left {
-        margin-bottom: 40px;
-    }
-
-    .footer-right {
-        margin-top: 40px;
-    }
-
     .banner-information p.up {
         font-size: 7.5vw;
     }
@@ -1012,7 +1017,7 @@ footer .social:hover {
     }
 }
 
-@media (max-width: 652px) {
+@media (max-width: 682px) /* 652 */{
     .box-chef {
         width: 100%;
     }
@@ -1023,21 +1028,32 @@ footer .social:hover {
 
     .footer-left {
         width: 100%;
+        text-align: center;
     }
 
     .footer-center {
         width: 100%;
+        text-align: center;
+    }
+
+    .footer-center h2 {
+        text-align: center;
     }
 
     .footer-right {
         width: 100%;
+        text-align: center;
     }
 
+    .footer-right h2 {
+        text-align: center;
+    }
+   
     .footer-center .images {
         grid-template-areas: 
             "item1 item2 item3"
             "item4 item5 item6";
-        justify-content: left;
+        justify-content: center;
     }
 }
 
@@ -1068,22 +1084,6 @@ footer .social:hover {
 
     .reservation-box-time .hour {
         font-size: 4vw;
-    }
-
-    .footer-left {
-        text-align: center;
-    }
-    .footer-center {
-        text-align: center;
-    }
-    .footer-center h2, .footer-right h2 {
-        text-align: center;
-    }
-    .footer-center .images {
-        justify-content: center;
-    }
-    .footer-right {
-        text-align: center;
     }
 }
 
