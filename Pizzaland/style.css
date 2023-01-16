@@ -921,7 +921,7 @@ footer .social:hover {
         display: none;
         /* justify-content: center; */
         /* dar um jeito de deixa o height com 100% sem possibilitar mostrar algo fora do menu */
-        height: 105%;
+        height: 100%;
         width: 100%;
         background-color: #1D1D1D;
         /* transition: all 5s linear; */
@@ -930,7 +930,7 @@ footer .social:hover {
         left: 0;
         flex-direction: column;
         font-size: 50px;
-        padding-top: 10vh; /* 100px */
+        padding: 10vh; /* 100px */
         z-index: 1000;
     }
 
