@@ -919,7 +919,7 @@ footer .social:hover {
 @media (max-width: 925px){
     .header-center {
         display: none;
-        /* justify-content: center; */
+        justify-content: center;
         /* dar um jeito de deixa o height com 100% sem possibilitar mostrar algo fora do menu */
         height: 100%;
         width: 100%;
