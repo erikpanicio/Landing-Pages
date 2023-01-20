@@ -36,7 +36,7 @@
         </header>
         <section id="apresentation" class="contents">
             <div class="container">
-                <p class="up">We provide Best pizza in Houston.</p>
+                <p class="up">We provide Best pizza in Houston.</p><!-- isso deveria estar dentro de outro container -->
                 <p class="down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellat corporis ducimus.</p>
                 <div class="buttons">
                     <button class="button button1">View Our Menu</button>
@@ -69,8 +69,12 @@
     <section id="service" class="contents">
         <div class="container">
             <h2>Service</h2>
+            <div class="drawing">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
             <h3>Why Pizzaland is Best?</h3>
-
             <div class="informations">
                 <div class="information">
                     <img src="images/icon1.svg" alt="">
@@ -115,6 +119,11 @@
     <section id="menu" class="contents">
         <div class="container">
             <h2>Menu</h2>
+            <div class="drawing">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
             <h3>Our Special Pizza Menu</h3>
             <div class="box-pizzas">
                 <a href="#" class="box-pizza">
@@ -172,6 +181,11 @@
     <section id="shop" class="contents">
         <div class="container">
             <h2>Shop</h2>
+            <div class="drawing">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
             <h3>Our Regular Food Collections</h3>
             <button class="arrow-left" onclick="shop_button_left()"></button>
             <button class="arrow-right" onclick="shop_button_right()"></button>
@@ -266,6 +280,11 @@
     <section id="team" class="contents">
         <div class="container">
             <h2>Team</h2>
+            <div class="drawing">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
             <h3>Our Master Chef</h3>
             <div class="box-chefs">
                 <div class="box-chef">
@@ -314,6 +333,11 @@
     <section id="gallery" class="contents">
         <div class="container">
             <h2>Gallery</h2>
+            <div class="drawing">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
             <h3>Our Seen Best Gallery</h3>
             <div class="gallery-box-grid"><!-- fazer aparecer na tela as imagens quando clicado e quando passar o mouse em cima aparecer clique ou algo do tipo -->
                 <div class="item item1">
@@ -328,9 +352,14 @@
         </div>
     </section>
 
-    <section id="testimonial" class="contents"> <!-- mudar nome -->
+    <section id="clients" class="contents"> <!-- mudar nome -->
         <div class="container">
-            <h2>Testimonial</h2>
+            <h2>Clients</h2>
+            <div class="drawing">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
             <h3>Our Beautiful Client Say!</h3>
             <div class="reviews">
                 <div class="review">
@@ -364,8 +393,12 @@
     <section id="reservation" class="contents">
         <div class="container">
             <h2>Reservation</h2>
+            <div class="drawing">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
             <h3>Our Special Pizza Menu</h3>
-            <!-- tentar sem grid, se não conseguir fazer os itens do input com grid e a outra divisão com flex -->
             <div class="reservation-box">
                 <form action="" class="reservation-box-grid">
                     <input class="item1" type="text" name="name" placeholder="Name">
@@ -428,7 +461,10 @@
         <div class="container">
             <h2>Subscribe News Letter for Ger Update</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi earum veniam soluta quaerat sint inventore, quae molestiae eaque ab aperiam autem ea.</p>
-            <input type="email" name="email" id="email" placeholder="Enter Your Mail">
+            <div class="teste">
+                <input type="email" name="email" id="email" placeholder="Enter Your Mail">
+                <input class="button" type="submit" value="Subscribe">
+            </div>
         </div>
     </section>
 
