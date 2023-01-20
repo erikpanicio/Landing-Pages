@@ -201,7 +201,7 @@ a:hover {
     width: 50%;   
 }
 
-#service, #menu, #shop, /* #gallery, */ #clients, #reservation, #team {
+#service, #menu, #shop, #team, #testimonial, #reservation, #news {
     margin: 100px 0px 20px 0px;
 }
 
@@ -630,43 +630,92 @@ p.value {
     width: 100%;
 }
 
-.reviews {
+#testimonial .box-clients {
+}
+
+.clients {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 370px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 1px black;
+    border-radius: 10px;
+}
+
+.client img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#testimonial .review {
+    color: #606060;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+
+#testimonial .name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#testimonial .role {
+    color: #606060;
+}
+
+
+
+/* News */
+
+#news .reviews {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.review {
+#news .review {
     margin: 20px;
     width: 370px;
 }
 
-.review img {
+#news .review img {
     width: 100%;
     border-radius: 10px;
 }
 
-.review .text {
+#news .review .text {
     width: 100%;
 }
 
-.review h4 {
+#news .review h4 {
     text-align: left;
     margin-top: 20px;
 }
 
-.review p {
+#news .review p {
     text-align: left;
     color: gray;
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-.review a {
+#news .review a {
     color: #FBB403;
     text-align: left;
     font-weight: bold;
 }
+
+/* Reservation */
 
 .reservation-box {
     display: flex;
@@ -795,6 +844,10 @@ p.value {
     left: -124px;
 }
 
+#news-letter input[type="submit"]:hover {
+    background-color: #e2a303;
+}
+
 footer {
     background-color: #1D1D1D;
 }
@@ -902,7 +955,12 @@ footer .social:hover {
         justify-content: center;
     }
 
-    .reviews {
+    .clients {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #news .reviews {
         justify-content: center;
     }
 }
@@ -1203,7 +1261,25 @@ footer .social:hover {
             "item6";
     }
 
-    .review {
+    /* VER */
+    #testimonial .client {
+        width: 100%;
+        height: auto;
+    }
+
+    #testimonial .review {
+        font-size: 4vw;
+    }
+
+    #testimonial .name {
+        font-size: 6vw;
+    }
+
+    #testimonial .role {
+        font-size: 4vw;
+    }
+
+    #news .review {
         width: 100%;
     }
 
