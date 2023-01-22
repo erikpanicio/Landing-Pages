@@ -421,14 +421,23 @@ span.orange {
 
 .box-review1 {
     display: flex;
+
+    /* opacity: 0%;
+    transition: 3s; */
 }
 
 .box-review2 {
     display: flex;
+
+    opacity: 0%;
+    transition: opacity 5s;
 }
 
 .box-review3 {
     display: flex;
+
+    opacity: 0%;
+    transition: opacity 5s;
 }
 
 .review {
