@@ -433,6 +433,7 @@ p.value {
     display: flex;
     justify-content: center;
     margin-left: 0;
+    transition: 1s;
     /* flex-wrap: wrap; */
      /* -840px talvez todos sejam esse */ /* 0 */ /* 839px */ /* 1677px */ /* 2517px */
 }
@@ -579,7 +580,7 @@ p.value {
 }
 
 #gallery {
-    background-image: url("images/background_gallery.svg");
+    background-image: url("images/background_'gallery'.svg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 120px 0px 20px 0px; /* o margin do #gallery é diferente dos outros porque o tamanho do container do teams é menor */
@@ -599,12 +600,15 @@ p.value {
 
 .item {
     text-align: center;
+    background-color: black;
 }
 
 .item:hover {
-    visibility: visible;
-    opacity: 50%;
-    transition: opacity 0.5s;
+    background-image: url("images/olhinho.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    cursor: pointer;
 }
 
 .item1 {
@@ -628,6 +632,12 @@ p.value {
 
 .gallery-box-grid img {
     width: 100%;
+    height: 100%;
+}
+
+.gallery-box-grid img:hover {
+    opacity: 30%;
+    transition: opacity 0.5s;
 }
 
 #testimonial .box-clients {
@@ -1134,7 +1144,7 @@ footer .social:hover {
 
 @media (max-width: 682px) /* 652 */{
     .box-chef {
-        width: 100%;
+        width: 70%;
     }
 
     footer .container {
