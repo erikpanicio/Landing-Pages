@@ -674,6 +674,9 @@ p.value {
     width: 420px;
     height: 344px;
 }
+
+/* as coisas estão indo um pouco para o lado quando clica nas imagens */
+
 /* Testimonial */
 
 .clients {
@@ -1127,7 +1130,7 @@ footer .social:hover {
     }
     
     .gallery-box-fullscreen button {
-        top: 20%;
+        top: 15%;
         right: 10px;
     }
 
@@ -1141,8 +1144,6 @@ footer .social:hover {
         width: 100%;
         margin: 25px 0px;
     }
-
-    /* quebrar o botão do news-letter aqui */
 }
 
 @media (max-width: 820px) {
