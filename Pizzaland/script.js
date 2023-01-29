@@ -85,3 +85,52 @@ function hidden_social2() {
 function hidden_social3() {
     social3.style.display = "none"
 }
+
+/* Section gallery */
+
+var gallery_fullscreen = document.querySelector("#gallery .gallery-fullscreen")
+
+/* melhorar (deixar mais automático) */
+
+function open_fullscreen(imagem) {
+    gallery_fullscreen.style.display = "flex"
+    document.body.style.overflowY = "hidden"
+
+    var image_gallery_fullscreen = document.querySelector(".gallery-fullscreen img")
+
+    if (imagem == 1) {
+        let image_gallery = document.querySelector(".gallery-box-grid .item1 img")
+        var image_gallery_src = image_gallery.getAttribute("src")
+        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
+    }
+    else if (imagem == 2) {
+        let image_gallery = document.querySelector(".gallery-box-grid .item2 img")
+        var image_gallery_src = image_gallery.getAttribute("src")
+        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
+    }
+    else if (imagem == 3) {
+        let image_gallery = document.querySelector(".gallery-box-grid .item3 img")
+        var image_gallery_src = image_gallery.getAttribute("src")
+        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
+    }
+    else if (imagem == 4) {
+        let image_gallery = document.querySelector(".gallery-box-grid .item4 img")
+        var image_gallery_src = image_gallery.getAttribute("src")
+        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
+    }
+    else if (imagem == 5) {
+        let image_gallery = document.querySelector(".gallery-box-grid .item5 img")
+        var image_gallery_src = image_gallery.getAttribute("src")
+        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
+    }
+    else if (imagem == 6) {
+        let image_gallery = document.querySelector(".gallery-box-grid .item6 img")
+        var image_gallery_src = image_gallery.getAttribute("src")
+        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
+    }
+}
+
+function close_fullscreen() {
+    gallery_fullscreen.style.display = "none"
+    document.body.style.overflowY = "visible"
+}

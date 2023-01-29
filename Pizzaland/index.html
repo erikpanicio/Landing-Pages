@@ -352,14 +352,30 @@
             </div>
             <h3>Our Seen Best Gallery</h3>
             <div class="gallery-box-grid"><!-- fazer aparecer na tela as imagens quando clicado e quando passar o mouse em cima aparecer clique ou algo do tipo -->
-                <div class="item item1">
+                <div class="item item1" onclick="open_fullscreen(1)">
                     <img src="images/gallery-1.png" alt="">
                 </div>
-                <div class="item item2"><img src="images/gallery-2.png" alt=""></div>
-                <div class="item item3"><img src="images/gallery-3.png" alt=""></div>
-                <div class="item item4"><img src="images/gallery-4.png" alt=""></div>
-                <div class="item item5"><img src="images/gallery-5.png" alt=""></div>
-                <div class="item item6"><img src="images/gallery-6.png" alt=""></div>
+                <div class="item item2" onclick="open_fullscreen(2)">
+                    <img src="images/gallery-2.png" alt="">
+                </div>
+                <div class="item item3" onclick="open_fullscreen(3)">
+                    <img src="images/gallery-3.png" alt="">
+                </div>
+                <div class="item item4" onclick="open_fullscreen(4)">
+                    <img src="images/gallery-4.png" alt="">
+                </div>
+                <div class="item item5" onclick="open_fullscreen(5)">
+                    <img src="images/gallery-5.png" alt="">
+                </div>
+                <div class="item item6" onclick="open_fullscreen(6)">
+                    <img src="images/gallery-6.png" alt="">
+                </div>
+            </div>
+            <div class="gallery-fullscreen">
+                <div class="gallery-box-fullscreen">
+                    <button onclick="close_fullscreen()">X</button>
+                    <img src="" alt="">
+                </div>
             </div>
         </div>
     </section>
