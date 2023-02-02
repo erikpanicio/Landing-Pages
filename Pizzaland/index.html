@@ -23,27 +23,34 @@
     <div class="background">
         <header>
             <nav class="container">
-                <ul>
-                    <div class="header-left">
-                        <li><a href="#"><img src="images/logo.svg" alt=""></a></li>
-                    </div>
-                    <div class="header-center"> <!-- deixar invisivel e colocar outra div como menu ou deixar assim mesmo? -->
-                        <li><a href="#about-us" onclick="menu_clicado()">About</a></li>
-                        <li><a href="#service" onclick="menu_clicado()">Service</a></li>
-                        <li><a href="#menu" onclick="menu_clicado()">Menu</a></li>
-                        <li><a href="#shop" onclick="menu_clicado()">Shop</a></li>
-                        <li><a href="#" onclick="menu_clicado()">Blog</a></li>
-                        <li><a href="#" onclick="menu_clicado()">Contact</a></li>
-                    </div>
-                    <div class="header-right">
-                        <li><a href="#"><img src="images/search.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/cart.svg" alt=""></a></li>
-                        <li class="phone">
-                            <img src="images/phone.svg" alt=""><a href="#">+1123 456 789</a>
-                        </li>
-                    </div>
-                    <button class="menu" onclick="clicked()"></button>
+                <ul class="header-left">
+                    <li><a href="#"><img src="images/logo.svg" alt=""></a></li>
                 </ul>
+                <ul class="header-center">
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="header-right">
+                    <li><a href="#"><img src="images/search.svg" alt=""></a></li>
+                    <li><a href="#"><img src="images/cart.svg" alt=""></a></li>
+                    <li class="phone"><img src="images/phone.svg" alt=""><a href="#">+1123 456 789</a>
+                    </li>
+                </ul>
+                
+                <button class="open-menu" onclick="openMenu()"></button>
+                <button class="close-menu" onclick="closeMenu()"></button>
+                <div class="menu-mobile">
+                    <a href="#about-us" onclick="closeMenu()">About</a>
+                    <a href="#service" onclick="closeMenu()">Service</a>
+                    <a href="#menu" onclick="closeMenu()">Menu</a>
+                    <a href="#shop" onclick="closeMenu()">Shop</a>
+                    <a href="#" onclick="closeMenu()">Blog</a>
+                    <a href="#" onclick="closeMenu()">Contact</a>
+                </div>
             </nav>
         </header>
         <section id="apresentation" class="contents">

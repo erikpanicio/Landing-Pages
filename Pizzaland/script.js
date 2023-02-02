@@ -1,26 +1,36 @@
+/* Variáveis */
+
 var num = 0
 var clique = 0
 var total = 0
 
-var header_center = document.getElementsByClassName("header-center")[0]
-var shop_pizza = document.getElementsByClassName("shop-pizza")[0]
+var open_menu = document.querySelector(".open-menu")
+var menu_mobile = document.querySelector(".menu-mobile")
+var close_menu = document.querySelector(".close-menu")
+var shop_pizza = document.querySelector(".shop-pizza")
 var pizza = document.querySelectorAll("div.pizza").length /* estou contando quantas class pizza existem */
 
-function clicked() {
-    header_center.style.display = "flex"
-    document.body.style.overflowY = "hidden"
-    num += 1
-    if(num > 1) {
-        header_center.style.display = "none"
-        document.body.style.overflowY = "visible"
-        num = 0
-    }
+/* Menu */
+
+function openMenu() {
+    open_menu.style.visibility = "hidden"
+    menu_mobile.style.right = "0px"
+    close_menu.style.right = "155px" /* teste */
+    /* close_menu.style.display = "block" */
+
+    
 }
 
-function menu_clicado() {
-    header_center.style.display = "none"
-    document.body.style.overflowY = "visible"
+function closeMenu() {
+    open_menu.style.visibility = "visible"
+    /* menu_mobile.style.display = "none" */
+    menu_mobile.style.right = "-200px"
+    close_menu.style.right = "-200px" /* teste */
+    /* close_menu.style.display = "none" */
+    
 }
+
+/* Shop */
 
 function shop_button_left() {
     buttonLeft()
