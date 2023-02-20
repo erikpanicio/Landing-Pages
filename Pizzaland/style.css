@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
@@ -11,8 +12,9 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -24,16 +26,49 @@ body::-webkit-scrollbar-thumb {
     background-color: #FBB403;
 }
 
-.background {
+.slider1 {
+    width: 100%; /* width: 1921px; */ /* 100% quando a tela diminuir */
+    /* transform: translate3d(3842px); */
+    overflow: hidden; /* ver se está certo */
+}
+/* 0 -1921 -3842 */
+.slider2 {
+    width: 100%; /* width: 5763px; */ /* 322.5% */
+    margin-left: 0;
+    display: flex;
+    flex: none;
+    /* transition: margin-left 1s; */
+    transition: transform 1s;
+    transform: translate3d(0px, 0px, 0px); /* -1488px */
+}
+
+.slide1 {
+    width: 100%; /* 1921px */
+    height: 843.5px;
     background-image: url("images/header.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    flex: none;
+}
+
+.slide2 {
+    width: 100%;
+    height: 843.5px;
+    background-color: blue;
+    flex: none;
+}
+
+.slide3 {
+    width: 100%;
+    height: 843.5px;
+    background-color: purple;
+    flex: none;
 }
 
 .container {
     width: 1300px;
-    margin: 0px 20px;
+    margin: 20px;
 }
 
 header {
@@ -81,6 +116,11 @@ a:hover {
     background-color: #FBB403;
     padding: 10px;
     border-radius: 10px;
+    transition: background-color 1s;
+}
+
+.phone:hover {
+    background-color: #d39906;
 }
 
 .open-menu {
@@ -90,6 +130,9 @@ a:hover {
     color: white;
     cursor: pointer;
     margin-left: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
 }
 
 .open-menu::after, .open-menu::before {
@@ -111,7 +154,7 @@ a:hover {
     color: white;
     padding: 8px 13px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 3;
     transition: 1s;
 }
 
@@ -128,9 +171,10 @@ a:hover {
     position: fixed;
     top: 0;
     right: -200px;
-    background-color: #1d1d1de1;
+    background-color: #1d1d1df3;
     text-align: center;
     transition: 1s;
+    z-index: 2;
 }
 
 .menu-mobile a {
@@ -173,7 +217,7 @@ a:hover {
 }
 
 #apresentation .button {
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 5px black;
 }
 
 .button {
@@ -184,12 +228,23 @@ a:hover {
     color: white;
     font-size: 16px;
     font-weight: bold;
+    transition: background-color 1s;
+}
+
+.button:hover {
+    background-color: #d39906;
 }
 
 .buttons .button1 {
     width: 175px;
     margin-right: 10px;
     box-shadow: 0px 0px 5px black;
+    transition: all 1s
+}
+
+.buttons .button1:hover {
+    background-color: white;
+    transition: all 1s;
 }
 
 .buttons .button2 {
@@ -197,17 +252,23 @@ a:hover {
     background-color: transparent;
     border: 1px solid white;
     box-shadow: 0px 0px 5px black;
+    transition: all 1s
+}
+
+.buttons .button2:hover {
+    background-color: #FBB403;
+    transition: all 1s
 }
 
 .transition-buttons {
     display: flex;
     justify-content: center;
-    margin: 20px;
-    /* position: absolute;
-    bottom: 0;
+    /* margin: 20px; */
+    position: absolute;
+    bottom: 110px;
     left: 50%;
-    right: 50%; */
-
+    right: 50%;
+    z-index: 1;
 }
 
 .transition-button1, .transition-button2, .transition-button3 {
@@ -240,10 +301,6 @@ a:hover {
     width: 50%;   
 }
 
-#service, #menu, #shop, #team, #testimonial, #reservation, #news {
-    margin: 100px 0px 20px 0px;
-}
-
 h2 {
     text-align: center;
     color: #FBB403;
@@ -272,8 +329,6 @@ h3 {
     color: gray;
 }
 
-/* Deixar? */
-
 .drawing {
     display: flex;
     justify-content: center;
@@ -294,7 +349,10 @@ h3 {
     height: 2px;
     background-color: black;
 }
-/* ?? */
+
+#service, #menu, #shop, #team, #testimonial, #reservation, #news {
+    margin: 100px 0px 20px 0px;
+}
 
 #service .informations {
     display: flex;
@@ -311,15 +369,8 @@ h3 {
     flex-wrap: wrap;
     margin: 0px 20px 20px 20px;
     padding: 0px 20px;
-    border: 3px solid #FBB403;
-    border-radius: 10px;
     height: 280px;
     width: 370px;
-}
-
-#service .information:hover {
-    background-color: #FBB403;
-    /* color: white; */
 }
 
 #service .information img {
@@ -333,18 +384,23 @@ h3 {
     text-align: center;
 }
 
-#service .information:hover h4 {
-    color: white;
-}
-
 #service .information p {
     text-align: center;
     line-height: 25px;
     color: #606060;
 }
 
-#service .information:hover p {
-    color: white;    
+#service .check {
+    background-color: #FBB403;
+    border-radius: 10px;
+}
+
+#service .check h4 {
+    color: white;
+}
+
+#service .check p {
+    color: white !important;
 }
 
 #banner {
@@ -396,6 +452,7 @@ h3 {
     border: 1px dashed gray;
     border-radius: 20px;
     width: 560px;
+    /* height: 171px; */
     align-items: center;
     margin: 20px;
     padding: 15px;
@@ -473,6 +530,7 @@ p.value {
     justify-content: center;
     margin-left: 0;
     transition: 1s;
+    transform: translate3d(1680px);
     /* flex-wrap: wrap; */
      /* -840px talvez todos sejam esse */ /* 0 */ /* 839px */ /* 1677px */ /* 2517px */
 }
@@ -606,20 +664,26 @@ p.value {
     margin-top: 10px;
 }
 
+#team .images:hover { /* ?? */
+    transition: display 1s;
+}
+
 .social {
     background-color: #333333;
     padding: 10px;
     border-radius: 50%;
     width: 38px;
     height: 38px;
+    transition: all 1s;
 }
 
 .social:hover {
-    filter: opacity(0.4) drop-shadow(0 0 0 #fbb503); 
+    filter: opacity(0.4) drop-shadow(0 0 0 #fbb503);
+    transition: all 1s;
 }
 
 #gallery {
-    background-image: url("images/background_'gallery'.svg");
+    background-image: url("images/background_gallery.svg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 120px 0px 20px 0px; /* o margin do #gallery é diferente dos outros porque o tamanho do container do teams é menor */
@@ -703,10 +767,6 @@ p.value {
     padding: 10px 20px;
     border-radius: 30px;
     cursor: pointer;
-}
-
-.gallery-box-fullscreen button:hover {
-    background-color: #e2a303;
 }
 
 .gallery-box-fullscreen img {
@@ -886,6 +946,11 @@ p.value {
 
 .reservation-box-time button {
     margin: 20px auto auto auto;
+    display: flex;
+}
+
+.reservation-box-time img {
+    margin-right: 10px;
 }
 
 #news-letter {
@@ -927,14 +992,9 @@ p.value {
 #news-letter input[type="submit"] {
     width: 111px;
     position: relative;
-    background-color: #FBB403;
     padding: 15px;
     height: 48px;
     left: -124px;
-}
-
-#news-letter input[type="submit"]:hover {
-    background-color: #e2a303;
 }
 
 footer {
@@ -1120,6 +1180,10 @@ footer .social:hover {
 @media (max-width: 925px){
     .header-center {
         display: none;
+    }
+    
+    .header-right {
+        margin-right: 12%;
     }
 
     .open-menu {

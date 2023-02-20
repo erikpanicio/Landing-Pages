@@ -1,36 +1,150 @@
-/* Variáveis */
-
-var num = 0
-var clique = 0
-var total = 0
+/* Menu mobile */
 
 var open_menu = document.querySelector(".open-menu")
 var menu_mobile = document.querySelector(".menu-mobile")
 var close_menu = document.querySelector(".close-menu")
-var shop_pizza = document.querySelector(".shop-pizza")
-var pizza = document.querySelectorAll("div.pizza").length /* estou contando quantas class pizza existem */
-
-/* Menu */
 
 function openMenu() {
     open_menu.style.visibility = "hidden"
     menu_mobile.style.right = "0px"
-    close_menu.style.right = "155px" /* teste */
-    /* close_menu.style.display = "block" */
-
-    
+    close_menu.style.right = "155px" 
 }
 
 function closeMenu() {
     open_menu.style.visibility = "visible"
-    /* menu_mobile.style.display = "none" */
     menu_mobile.style.right = "-200px"
-    close_menu.style.right = "-200px" /* teste */
-    /* close_menu.style.display = "none" */
-    
+    close_menu.style.right = "-200px"
 }
 
+/* Slider */
+
+var slider2 = document.querySelector(".slider2")
+
+/* preciso disso para que quando a tela for redimencionada ela siga o tamanho correto */
+window.addEventListener("resize", function () {
+    var tela = document.body.clientWidth
+})
+
+function transitionButton1() {
+    slider2.style.transform = `translate3d(0px, 0px, 0px)`
+}
+
+function transitionButton2() {
+    var tela = document.body.clientWidth
+    /* let tela = window.clientWidth */
+    slider2.style.transform = `translate3d(${-tela}px, 0px, 0px)`
+    /* var open_menu = document.querySelector(".open-menu")
+    open_menu.style.cssText = "position: absolute; top: 40px; right: 20px;" */
+}
+
+function transitionButton3() {
+    var tela = document.body.clientWidth
+    /* let tela = window.clientWidth */
+    slider2.style.transform = `translate3d(${-tela*2}px, 0px, 0px)`
+}
+
+/* Information */
+
+var n = 0
+
+setInterval(colocar, 2500)
+
+function colocar() {
+    var information = document.getElementsByClassName("information")[n]
+    information.classList.add("check")
+    setTimeout(remover, 2500)
+    function remover() {
+        information.classList.remove("check")
+    }
+    n += 1
+    if (n > 2) {
+        n = 0
+    }
+}
+
+
+
+/* 
+
+var n = 0
+
+setInterval(colocar, 2000)
+
+function colocar() {
+    var information = document.getElementsByClassName("information")[n]
+    if (information.classList.contains == true){
+        information.classList.remove("check")
+    }
+    else {
+        var information = document.getElementsByClassName("information")[n]
+        information.classList.add("check")
+    }
+    n += 1
+    if (n > 2) {
+        n = 0
+    }
+}
+
+*/
+
+
+/* 
+
+var n = 0
+
+setInterval(colocar, 2500)
+
+var information = document.getElementsByClassName("information")[0]
+
+information.classList.add("check")
+
+function colocar() {
+    for (var c=0;c<3;c++) {
+        var information = document.getElementsByClassName("information")[c]
+        if (information.classList.contains("check") == true) {
+            information.classList.remove("check")
+            setInterval(remover, 2500)
+            function remover() {
+                var information = document.getElementsByClassName("information")[c+1]
+                information.classList.add("check")
+            }
+        }
+    }
+}
+
+*/
+
+/* 
+
+var n = 0
+
+setInterval(colocar, 2500)
+
+function colocar() {
+    var information = document.getElementsByClassName("information")[n]
+    if (information.classList.contains("check") == false) {
+        information.classList.add("check")
+    }
+    else {
+        setTimeout(remover, 2500)
+        function remover() {
+            information.classList.remove("check")
+        }
+    }
+    n += 1
+    if (n > 2) {
+        n = 0
+    }
+}
+
+*/
+
 /* Shop */
+
+var clique = 0
+var total = 0
+var shop_pizza = document.querySelector(".shop-pizza")
+var pizza = document.querySelectorAll("div.pizza").length /* estou contando quantas class pizza existem */
 
 function shop_button_left() {
     buttonLeft()

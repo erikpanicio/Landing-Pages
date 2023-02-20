@@ -20,60 +20,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background">
-        <header>
-            <nav class="container">
-                <ul class="header-left">
-                    <li><a href="#"><img src="images/logo.svg" alt=""></a></li>
-                </ul>
-                <ul class="header-center">
-                    <li><a href="#about-us">About</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <ul class="header-right">
-                    <li><a href="#"><img src="images/search.svg" alt=""></a></li>
-                    <li><a href="#"><img src="images/cart.svg" alt=""></a></li>
-                    <li class="phone"><img src="images/phone.svg" alt=""><a href="#">+1123 456 789</a>
-                    </li>
-                </ul>
-                
-                <button class="open-menu" onclick="openMenu()"></button>
-                <button class="close-menu" onclick="closeMenu()"></button>
-                <div class="menu-mobile">
-                    <a href="#about-us" onclick="closeMenu()">About</a>
-                    <a href="#service" onclick="closeMenu()">Service</a>
-                    <a href="#menu" onclick="closeMenu()">Menu</a>
-                    <a href="#shop" onclick="closeMenu()">Shop</a>
-                    <a href="#" onclick="closeMenu()">Blog</a>
-                    <a href="#" onclick="closeMenu()">Contact</a>
-                </div>
-            </nav>
-        </header>
-        <section id="apresentation" class="contents">
-            <div class="container">
-                <p class="up">We provide Best pizza in Houston.</p><!-- isso deveria estar dentro de outro container -->
-                <p class="down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellat corporis ducimus.</p>
-                <div class="buttons">
-                    <button class="button button1">View Our Menu</button>
-                    <button class="button button2">Book a table</button>
-                </div>
-                <div class="transition-buttons">
-                    <button class="transition-button1"></button>
-                    <button class="transition-button2"></button>
-                    <button class="transition-button3"></button>
-                </div>
+    <div class="slider">
+        <div class="slider2">
+            <div class="slide1">
+                <header>
+                    <nav class="container">
+                        <ul class="header-left">
+                            <li><a href="#"><img src="images/logo.svg" alt=""></a></li>
+                        </ul>
+                        <ul class="header-center">
+                            <li><a href="#about-us">About</a></li>
+                            <li><a href="#service">Service</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#shop">Shop</a></li>
+                            <li><a href="#news-letter">Newsletter</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <ul class="header-right">
+                            <li>
+                                <a href="#"><img src="images/search.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/cart.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="phone">
+                                <img src="images/phone.svg" alt="">
+                                <a href="#">+1123 456 789</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <section id="apresentation" class="contents">
+                    <div class="container">
+                        <p class="up">We provide Best pizza in Houston.</p><!-- isso deveria estar dentro de outro container -->
+                        <p class="down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellat corporis ducimus.</p>
+                        <div class="buttons">
+                            <button class="button button1">View Our Menu</button>
+                            <button class="button button2">Book a table</button>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
+
+        <button class="open-menu" onclick="openMenu()"></button>
+        <button class="close-menu" onclick="closeMenu()"></button>
+        <div class="menu-mobile">
+            <a href="#about-us" onclick="closeMenu()">About</a>
+            <a href="#service" onclick="closeMenu()">Service</a>
+            <a href="#menu" onclick="closeMenu()">Menu</a>
+            <a href="#shop" onclick="closeMenu()">Shop</a>
+            <a href="#news-letter" onclick="closeMenu()">Newsletter</a>
+            <a href="#footer" onclick="closeMenu()">Contact</a>
+        </div>
+        <div class="transition-buttons">
+            <button class="transition-button1" onclick="transitionButton1()"></button>
+            <button class="transition-button2" onclick="transitionButton2()"></button>
+            <button class="transition-button3" onclick="transitionButton3()"></button>
+        </div>
     </div>
 
     <section id="about-us" class="contents">
         <div class="container">
             <div class="text">
-                <h2 style="color: black;">About Us</h2>
+                <h2>About Us</h2>
                 <h3>Pizzaland is Ome Of The Most Hygienie & Trusted Food Service</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quas, omnis, repellat facilis velit, saepe blanditiis quasi aperiam odio voluptatibus esse laboriosam explicabo quos eos mollitia nisi reiciendis modi cumque!
@@ -95,7 +107,7 @@
             </div>
             <h3>Why Pizzaland is Best?</h3>
             <div class="informations">
-                <div class="information">
+                <div class="information check">
                     <img src="images/icon1.svg" alt="">
                     <h4>Fresh & Healthy Pizza</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -528,7 +540,8 @@
                     </div>
                     <div class="box-button">
                         <button class="button">
-                            <img src="images/phone.svg" alt=""><a href="#">+1123 456 789</a>
+                            <img src="images/phone.svg" alt="">
+                            <a href="#">+1123 456 789</a>
                         </button>
                     </div>
                 </div>
@@ -547,7 +560,7 @@
         </div>
     </section>
 
-    <footer class="contents">
+    <footer id="footer" class="contents">
         <div class="container">
             <div class="footer-left">
                 <img src="images/logo.svg" alt="">
