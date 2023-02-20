@@ -33,8 +33,6 @@ function transitionButton2() {
     var tela = document.body.clientWidth
     /* let tela = window.clientWidth */
     slider2.style.transform = `translate3d(${-tela}px, 0px, 0px)`
-    /* var open_menu = document.querySelector(".open-menu")
-    open_menu.style.cssText = "position: absolute; top: 40px; right: 20px;" */
 }
 
 function transitionButton3() {
