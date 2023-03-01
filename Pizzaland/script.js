@@ -21,21 +21,28 @@ function closeMenu() {
 var slider2 = document.querySelector(".slider2")
 
 /* preciso disso para que quando a tela for redimencionada ela siga o tamanho correto */
-window.addEventListener("resize", function () {
+/* window.addEventListener("resize", function () {
     var tela = document.body.clientWidth
-})
+    
+    if(n==0) {
+        slider2.style.transform = `translate3d(0px, 0px, 0px)`
+    }
+    else {
+        slider2.style.transform = `translate3d(${-tela*n}px, 0px, 0px)`
+    }
+}) */
 
-function transitionButton1() {
+function transitionButton1(n) {
     slider2.style.transform = `translate3d(0px, 0px, 0px)`
 }
 
-function transitionButton2() {
+function transitionButton2(n) {
     var tela = document.body.clientWidth
     /* let tela = window.clientWidth */
     slider2.style.transform = `translate3d(${-tela}px, 0px, 0px)`
 }
 
-function transitionButton3() {
+function transitionButton3(n) {
     var tela = document.body.clientWidth
     /* let tela = window.clientWidth */
     slider2.style.transform = `translate3d(${-tela*2}px, 0px, 0px)`
