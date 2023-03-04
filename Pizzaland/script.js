@@ -186,3 +186,26 @@ function close_fullscreen() {
     gallery_fullscreen.style.display = "none"
     document.body.style.overflowY = "visible"
 }
+
+/* Reservation */
+
+var data = new Date()
+
+data = data.getDay()+1
+console.log(data)
+
+if(data == 2 || data == 3) {
+    /* 07:00 AM - 02:00 PM */
+}
+else if(data == 4 || data == 5) {
+    /* 06:00 AM - 01:00 PM */
+    var optgroup = document.querySelector("#reservation .optgroup")
+    optgroup.innerHTML += "<option></option>"
+}
+else if(data == 6){
+/* fechado */
+}
+else if(data == 7 || data == 1) {
+    /* 07:30 AM - 04:00 PM */
+}
+

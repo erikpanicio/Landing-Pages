@@ -81,7 +81,6 @@ body::-webkit-scrollbar-thumb {
 .container {
     width: 1300px;
     margin: 0px 20px;
-    padding: 150px 0px;
 }
 
 nav {
@@ -309,7 +308,7 @@ a:hover {
 #about-us .container {
     display: flex;
     justify-content: flex-end;
-    /* padding: 155.5px 0px; */
+    padding: 150px 0px;
 }
 
 #about-us .text {
@@ -364,6 +363,11 @@ h3 {
     width: 130px;
     height: 2px;
     background-color: black;
+}
+
+#service, #menu, #shop, #team, #gallery, #testimonial, #news, #reservation {
+    margin: 100px 0px;
+    padding: 50px 0px;
 }
 
 #service .informations {
@@ -621,12 +625,8 @@ p.value {
 
 /* Team */
 
-#team .container, #testimonial .container, #news .container, #reservation .container {
-    padding-bottom: 0;
-}
-
 #team .container {
-    height: 815px; /* para não empurrar para baixo o gallery quando abre as informações em baixo */
+    height: 700px; /* para não empurrar para baixo o gallery quando abre as informações em baixo */
     /* margin-bottom: 100px; */
 }
 
@@ -701,7 +701,7 @@ p.value {
     background-image: url("images/background_gallery.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 120px 0px 20px 0px; /* o margin do #gallery é diferente dos outros porque o tamanho do container do teams é menor */
+   /*  margin: 120px 0px 20px 0px;  *//* o margin do #gallery é diferente dos outros porque o tamanho do container do teams é menor */
 }
 
 .gallery-box-grid {
@@ -970,6 +970,7 @@ p.value {
     background-size: cover;
     background-position: center;
     margin: 150px 0px 0px 0px;
+    padding: 150px 0px;
 }
 
 #news-letter h2 {
@@ -1008,6 +1009,7 @@ p.value {
 
 footer {
     background-color: #1D1D1D;
+    padding: 150px 0px;
 }
 
 footer .container {
@@ -1125,10 +1127,6 @@ footer .social:hover {
      #apresentation p.up {
         width: 50vw;
     }
-
-    #shop .container {
-        padding: 100px 0px;
-    }
     
     .pizza {
         width: 35vw;
@@ -1168,7 +1166,7 @@ footer .social:hover {
         width: 100%;
     }
     
-    .teste {
+    #news-letter .email {
         display: flex;
         flex-direction: column;
         align-items: center;
