@@ -14,11 +14,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    
 }
 
 body::-webkit-scrollbar {
     background-color: white;
     width: 5px;
+    
 }
 
 body::-webkit-scrollbar-thumb {
@@ -65,13 +67,6 @@ body::-webkit-scrollbar-thumb {
     background-color: purple;
     flex: none;
 }
-
-/* 
- width: 100%;
-    height: 843.5px;
-    background-color: purple;
-    flex: none;
-*/
 
 .contents {
     display: flex;
@@ -151,7 +146,6 @@ a:hover {
     background: white;
 }
 
-/* ver se deixo assim ou faço ele aparecer em degradê de onde ele aparece por padrão */
 .close-menu {
     display: block;
     position: fixed;
@@ -220,12 +214,7 @@ a:hover {
 #apresentation p.down {
     color: white;
     width: 30%;
-    /*   */
     text-shadow: 1px 1px 1px black;
-}
-
-#apresentation .buttons {
-    /* margin-bottom: 200px; */
 }
 
 #apresentation .button {
@@ -277,8 +266,6 @@ a:hover {
     justify-content: center;
     position: relative;
     bottom: 30px;
-    /* left: 0;
-    right: 0; */
     z-index: 1;
     height: 0;
 }
@@ -472,7 +459,6 @@ h3 {
     border: 1px dashed gray;
     border-radius: 20px;
     width: 560px;
-    /* height: 171px; */
     align-items: center;
     margin: 20px;
     padding: 15px;
@@ -627,7 +613,6 @@ p.value {
 
 #team .container {
     height: 700px; /* para não empurrar para baixo o gallery quando abre as informações em baixo */
-    /* margin-bottom: 100px; */
 }
 
 .box-chefs {
@@ -677,10 +662,6 @@ p.value {
     margin-top: 10px;
 }
 
-#team .images:hover { /* ?? */
-    transition: display 1s;
-}
-
 .social {
     background-color: #333333;
     padding: 10px;
@@ -701,7 +682,6 @@ p.value {
     background-image: url("images/background_gallery.svg");
     background-repeat: no-repeat;
     background-size: cover;
-   /*  margin: 120px 0px 20px 0px;  *//* o margin do #gallery é diferente dos outros porque o tamanho do container do teams é menor */
 }
 
 .gallery-box-grid {
@@ -786,8 +766,6 @@ p.value {
 }
 
 /* as coisas estão indo um pouco para o lado quando clica nas imagens */
-
-/* fazer um transição suave */
 
 /* clicar no fundo e fechar ao ínves do botão */
 
@@ -1209,12 +1187,6 @@ footer .social:hover {
 
     #about-us .text {
         width: 100%;
-    }
-
-    .gallery-fullscreen {
-        top: 0;
-        left: 0;
-        right: 0;
     }
     
     .gallery-box-fullscreen button {

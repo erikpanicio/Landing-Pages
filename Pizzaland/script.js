@@ -20,33 +20,37 @@ function closeMenu() {
 
 var slider2 = document.querySelector(".slider2")
 
-/* preciso disso para que quando a tela for redimencionada ela siga o tamanho correto */
-/* window.addEventListener("resize", function () {
-    var tela = document.body.clientWidth
-    
-    if(n==0) {
-        slider2.style.transform = `translate3d(0px, 0px, 0px)`
-    }
-    else {
-        slider2.style.transform = `translate3d(${-tela*n}px, 0px, 0px)`
-    }
-}) */
+var slidenum = 0
 
-function transitionButton1(n) {
+function transitionButton1() {
     slider2.style.transform = `translate3d(0px, 0px, 0px)`
+    slidenum = 1
 }
 
-function transitionButton2(n) {
+function transitionButton2() {
     var tela = document.body.clientWidth
-    /* let tela = window.clientWidth */
     slider2.style.transform = `translate3d(${-tela}px, 0px, 0px)`
+    slidenum = 2
 }
 
-function transitionButton3(n) {
+function transitionButton3() {
     var tela = document.body.clientWidth
-    /* let tela = window.clientWidth */
     slider2.style.transform = `translate3d(${-tela*2}px, 0px, 0px)`
+    slidenum = 3
 }
+
+/* preciso disso para que quando a tela for redimencionada ela siga o tamanho correto */
+window.addEventListener("resize", function () {
+    if(slidenum == 1) {
+        transitionButton1()
+    }
+    else if(slidenum == 2) {
+        transitionButton2()
+    }
+    else if(slidenum == 3) {
+        transitionButton3()
+    }
+})
 
 /* Information */
 
