@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb {
 
 .slide1 {
     width: 100%;
-    height: 843.5px;
+    height: 800px;
     background-image: url("images/header.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb {
 
 .slide2 {
     width: 100%;
-    height: 843.5px;
+    height: 800px;
     background-image: url("images/header2.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
 
 .slide3 {
     width: 100%;
-    height: 843.5px;
+    height: 800px;
     background-color: purple;
     flex: none;
 }
@@ -196,7 +196,7 @@ a:hover {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 550px;
 }
 
