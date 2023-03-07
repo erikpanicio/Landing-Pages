@@ -18,7 +18,7 @@ function closeMenu() {
 
 /* Slider */
 
-var slider2 = document.querySelector(".slider2")
+var slider2 = document.querySelector("#slider2")
 
 var slidenum = 0
 

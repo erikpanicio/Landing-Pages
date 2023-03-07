@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
 * {
     border: 0;
     margin: 0;
@@ -27,12 +29,12 @@ body::-webkit-scrollbar-thumb {
     background-color: #FBB403;
 }
 
-.slider1 {
+#slider1 {
     width: 100%;
     overflow: hidden;
 }
 
-.slider2 {
+#slider2 {
     width: 100%;
     margin-left: 0;
     display: flex;
@@ -41,30 +43,10 @@ body::-webkit-scrollbar-thumb {
     transform: translate3d(0px, 0px, 0px);
 }
 
-.slide1 {
+#slide1 {
     width: 100%;
     height: 800px;
     background-image: url("images/header.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    flex: none;
-}
-
-.slide2 {
-    width: 100%;
-    height: 800px;
-    background-image: url("images/header2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    flex: none;
-}
-
-.slide3 {
-    width: 100%;
-    height: 800px;
-    background-image: url("images/header3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -81,24 +63,24 @@ body::-webkit-scrollbar-thumb {
     margin: 0px 20px;
 }
 
-nav {
+#slide1 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px !important;
 }
 
-.header-left, .header-center, .header-right {
+#slide1 .header-left, .header-center, .header-right {
     display: flex;
     align-items: center;
 }
 
-.header-center li {
+#slide1 .header-center li {
     margin-left: 20px;
     text-align: center;
 }
 
-.header-right li {
+#slide1 .header-right li {
     margin-left: 30px;
 }
 
@@ -115,7 +97,7 @@ a:hover {
     color: #ffffffc4;
 }
 
-.phone {
+#slide1 .phone {
     display: flex;
     align-items: center;
     background-color: #FBB403;
@@ -124,9 +106,144 @@ a:hover {
     transition: background-color 1s;
 }
 
-.phone:hover {
+#slide1 .phone:hover {
     background-color: #d39906;
 }
+
+/* Apresentation */
+
+#apresentation .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px 0px;
+    height: 550px;
+}
+
+#apresentation p.up {
+    width: 40%;
+    color: white;
+    text-align: left;
+    font-family: 'DM Serif Display', serif;
+    font-weight: normal;
+    font-size: 80px;
+    margin: 50px 0px 0px 0px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#apresentation p.down {
+    color: white;
+    width: 30%;
+    text-shadow: 1px 1px 1px black;
+}
+
+#slide1 #apresentation .button {
+    text-shadow: 1px 1px 5px black;
+}
+
+.button {
+    background-color: #FBB403;
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 1s;
+}
+
+.button:hover {
+    background-color: #d39906;
+}
+
+#slide1 .buttons .button1 {
+    width: 175px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 5px black;
+    transition: all 1s
+}
+
+#slide1 .buttons .button1:hover {
+    background-color: white;
+    transition: all 1s;
+}
+
+#slide1 .buttons .button2 {
+    width: 175px;
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px black;
+    transition: all 1s
+}
+
+#slide1 .buttons .button2:hover {
+    background-color: #FBB403;
+    transition: all 1s
+}
+
+#slide2 {
+    width: 100%;
+    height: 800px;
+    background-image: url("images/header2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: none;
+}
+
+
+#slide2 #apresentation p.up {
+    width: 100%;
+    text-align: center;
+    font-family: 'Leckerli One', sans-serif;
+    text-shadow: 7px 2px 0px black;
+}
+
+#slide2 #apresentation p.down {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Leckerli One', sans-serif;
+    text-shadow: 7px 2px 0px black;
+}
+
+#slide3 {
+    width: 100%;
+    height: 800px;
+    background-image: url("images/header3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: none;
+}
+
+#slide3 #apresentation p.up {
+    width: 80%;
+    font-size: 100px;
+}
+
+#slide3 #apresentation p.down {
+    width: 40%;
+    font-size: 18px;
+}
+
+#slide3 button {
+    padding: 40px;
+    width: 325px;
+    background-color: #FEE745;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#slide3 button:hover {
+    background-color: #9CD486;
+    color: white;
+}
+
+/* Menu celular (menu lateral) */
 
 .open-menu {
     display: none;
@@ -191,77 +308,6 @@ a:hover {
 
 .menu-mobile a:hover {
     text-decoration: underline;
-}
-
-/* Apresentation */
-
-#apresentation .container {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 550px;
-}
-
-#apresentation p.up {
-    width: 40%;
-    color: white;
-    text-align: left;
-    font-family: 'DM Serif Display', serif;
-    font-weight: normal;
-    font-size: 80px;
-    margin: 50px 0px 0px 0px;
-    text-shadow: 1px 1px 1px black;
-}
-
-#apresentation p.down {
-    color: white;
-    width: 30%;
-    text-shadow: 1px 1px 1px black;
-}
-
-#apresentation .button {
-    text-shadow: 1px 1px 5px black;
-}
-
-.button {
-    background-color: #FBB403;
-    cursor: pointer;
-    padding: 15px 25px;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 1s;
-}
-
-.button:hover {
-    background-color: #d39906;
-}
-
-.buttons .button1 {
-    width: 175px;
-    margin-right: 10px;
-    box-shadow: 0px 0px 5px black;
-    transition: all 1s
-}
-
-.buttons .button1:hover {
-    background-color: white;
-    transition: all 1s;
-}
-
-.buttons .button2 {
-    width: 175px;
-    background-color: transparent;
-    border: 1px solid white;
-    box-shadow: 0px 0px 5px black;
-    transition: all 1s
-}
-
-.buttons .button2:hover {
-    background-color: #FBB403;
-    transition: all 1s
 }
 
 .transition-buttons {
@@ -1105,7 +1151,7 @@ footer .social:hover {
 }
 
 @media (max-width: 1045px) {
-     #apresentation p.up {
+    #apresentation p.up {
         width: 50vw;
     }
     
@@ -1168,20 +1214,20 @@ footer .social:hover {
 }
 
 @media (max-width: 925px){
-    .header-center {
+    #slide1 .header-center {
         display: none;
     }
     
-    .header-right {
+    #slide1 .header-right {
         margin-right: 12%;
+    }
+
+    #slide1 #apresentation p.down {
+        width: 50vw;
     }
 
     .open-menu {
         display: block;
-    }
-
-    #apresentation p.down {
-        width: 50vw;
     }
 
     #about-us {
@@ -1210,20 +1256,42 @@ footer .social:hover {
 }
 
 @media (max-width: 820px) {
-    #apresentation p.up {
+    #slide1 #apresentation p.up {
         width: 100%;
         font-size: 12vw;
         text-align: center;
     }
 
-    #apresentation p.down {
+    #slide1 #apresentation p.down {
         width: 100%;
         text-align: center;
     }
 
-    #apresentation .buttons {
+    #slide1 #apresentation .buttons {
         display: flex;
         justify-content: center;
+    }
+
+    #slide2 #apresentation p.up {
+        width: 100%;
+        font-size: 10vw;
+        text-align: center;
+    }
+    
+    #slide3 #apresentation p.up {
+        width: 100%;
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    #slide3 #apresentation p.down {
+        width: 100%;
+        text-align: center;
+    }
+
+    #slide3 a {
+        display: flex;
+        justify-content: center;   
     }
 
     .pizza {
@@ -1327,7 +1395,7 @@ footer .social:hover {
 }
 
 @media (max-width: 540px) {
-    .header-right {
+    #slide1 .header-right {
         display: none;
     }
 
@@ -1413,7 +1481,7 @@ footer .social:hover {
 }
 
 @media (max-width: 380px) {
-    .button.button1 {
+    #slide1 .button.button1 {
         width: 100%;
         font-size: 3.5vw;
     }
@@ -1425,6 +1493,10 @@ footer .social:hover {
     .button.button2 {
         width: 100%;
         font-size: 3.5vw;
+    }
+
+    #slide3 button {
+        width: 100%;
     }
 
     #team .information p.up {
