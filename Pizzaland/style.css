@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 .slide2 {
     width: 100%;
     height: 800px;
-    background-image: url("images/header2.png");
+    background-image: url("images/header2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -64,7 +64,10 @@ body::-webkit-scrollbar-thumb {
 .slide3 {
     width: 100%;
     height: 800px;
-    background-color: purple;
+    background-image: url("images/header3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     flex: none;
 }
 
@@ -172,7 +175,7 @@ a:hover {
     position: fixed;
     top: 0;
     right: -200px;
-    background-color: #1d1d1df3;
+    background-color: #1d1d1df3; /* 000000c0 */
     text-align: center;
     transition: 1s;
     z-index: 2;
@@ -987,7 +990,7 @@ p.value {
 
 footer {
     background-color: #1D1D1D;
-    padding: 150px 0px;
+    padding: 100px 0px;
 }
 
 footer .container {
