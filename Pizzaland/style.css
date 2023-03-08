@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb {
     margin-left: 0;
     display: flex;
     flex: none;
-    /* transition: transform 1s; */
+    transition: transform 1s;
     transform: translate3d(0px, 0px, 0px);
 }
 
@@ -335,7 +335,7 @@ a:hover {
     cursor: pointer;
 }
 
-.transition-button3 {
+.transition-button3 { /* ???? */
     margin: 0;
 }
 

@@ -20,22 +20,36 @@ function closeMenu() {
 
 var slider2 = document.querySelector("#slider2")
 
+var button1 = document.querySelector(".transition-button1")
+var button2 = document.querySelector(".transition-button2")
+var button3 = document.querySelector(".transition-button3")
+
 var slidenum = 0
 
 function transitionButton1() {
     slider2.style.transform = `translate3d(0px, 0px, 0px)`
+    button1.style.backgroundColor = "#FBB403"
+    button2.style.backgroundColor = "transparent"
+    button3.style.backgroundColor = "transparent"
     slidenum = 1
 }
 
 function transitionButton2() {
     var tela = document.body.clientWidth
     slider2.style.transform = `translate3d(${-tela}px, 0px, 0px)`
+    button1.style.backgroundColor = "transparent"
+    button2.style.backgroundColor = "#FBB403"
+    button3.style.backgroundColor = "transparent"
     slidenum = 2
+
 }
 
 function transitionButton3() {
     var tela = document.body.clientWidth
     slider2.style.transform = `translate3d(${-tela*2}px, 0px, 0px)`
+    button1.style.backgroundColor = "transparent"
+    button2.style.backgroundColor = "transparent"
+    button3.style.backgroundColor = "#FBB403"
     slidenum = 3
 }
 
