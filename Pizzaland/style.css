@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 
 #slide1 {
     width: 100%;
-    height: 800px;
+    height: 750px;
     background-image: url("images/header.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,7 +128,7 @@ a:hover {
     font-family: 'DM Serif Display', serif;
     font-weight: normal;
     font-size: 80px;
-    margin: 50px 0px 0px 0px;
+    /* margin: 50px 0px 0px 0px; */
     text-shadow: 1px 1px 1px black;
 }
 
@@ -184,7 +184,7 @@ a:hover {
 
 #slide2 {
     width: 100%;
-    height: 800px;
+    height: 750px;
     background-image: url("images/header2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -192,6 +192,9 @@ a:hover {
     flex: none;
 }
 
+#slide2 .container {
+    margin-top: 98.5px;
+}
 
 #slide2 #apresentation p.up {
     width: 100%;
@@ -210,12 +213,16 @@ a:hover {
 
 #slide3 {
     width: 100%;
-    height: 800px;
+    height: 750px;
     background-image: url("images/header3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     flex: none;
+}
+
+#slide3 .container {
+    margin-top: 98.5px;
 }
 
 #slide3 #apresentation p.up {
@@ -1490,7 +1497,7 @@ footer .social:hover {
         margin: 20px;
     }
 
-    .button.button2 {
+    #slide1 .button.button2 {
         width: 100%;
         font-size: 3.5vw;
     }
