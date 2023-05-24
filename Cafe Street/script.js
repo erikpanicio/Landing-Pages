@@ -23,19 +23,24 @@ if(review_button_first.style.backgroundColor == "" && review_button_second.style
     review_button_first.style.backgroundColor = "#7c5912"
 }
 
+first()
+
+var porcentagem = 0
+
 function first() {
     box_review1.style.display = "flex"
     box_review2.style.display = "none"
     box_review3.style.display = "none"
 
-    box_review1.style.opacity = "100%"
-    box_review2.style.opacity = "0%"
-    box_review3.style.opacity = "0%"
+    box_review1.style.opacity = "0%"
+
+    setTimeout(() => {
+        opacity(1);
+      }, 100);
 
     review_button_first.style.backgroundColor = "#7c5912"
     review_button_second.style.backgroundColor = "#ffffff00"
     review_button_third.style.backgroundColor = "#ffffff00"
-
 }
 
 function second() {
@@ -43,14 +48,15 @@ function second() {
     box_review2.style.display = "flex"
     box_review3.style.display = "none"
 
-    box_review1.style.opacity = "0%"
-    box_review2.style.opacity = "100%"
-    box_review3.style.opacity = "0%"
+    box_review2.style.opacity = "0%"
+
+    setTimeout(() => {
+        opacity(2);
+      }, 100);
 
     review_button_first.style.backgroundColor = "#ffffff00"
     review_button_second.style.backgroundColor = "#7c5912"
     review_button_third.style.backgroundColor = "#ffffff00"
-
 }
 
 function third() {
@@ -58,21 +64,34 @@ function third() {
     box_review2.style.display = "none"
     box_review3.style.display = "flex"
 
-    box_review1.style.opacity = "0%"
-    box_review2.style.opacity = "0%"
-    box_review3.style.opacity = "100%"
-
+    box_review3.style.opacity = "0%"
+    
+    setTimeout(() => {
+        opacity(3);
+      }, 100);
+    
     review_button_first.style.backgroundColor = "#ffffff00"
     review_button_second.style.backgroundColor = "#ffffff00"
     review_button_third.style.backgroundColor = "#7c5912"
+}
 
+function opacity(v) {
+    if(v == 1){
+        box_review1.style.opacity = "100%"
+    }
+    else if(v == 2) {
+        box_review2.style.opacity = "100%"
+    }
+    else if(v == 3) {
+        box_review3.style.opacity = "100%"
+    }
 }
 
 /* Rotação automática do comments */
 
 var valor = review_button_first
 
-setInterval(rotacao, 5000)
+/* setInterval(rotacao, 5000)
 
 function rotacao() {
     if (valor == review_button_first) {
@@ -87,16 +106,4 @@ function rotacao() {
         third()
         valor = review_button_first
     }
-}
-
-/* TESTE */
-/* 
-while (largura > "1175px"){
-    var largura = screen.width
-}
-
-if (largura <= "1175px"){
-    box_review1.style.display = "none"
-    box_review2.style.display = "none"
-    box_review3.style.display = "none"
 } */

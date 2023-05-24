@@ -416,37 +416,30 @@ span.orange {
 .box-review {
     display: flex;
     overflow: hidden;
-    width: 100%; /* teste */
+    width: 100%;
 }
 
 .box-review1 {
-    display: flex;
-
-    /* opacity: 0%;
-    transition: 3s; */
+    /* display: flex; */
+    transition: opacity 1s;
 }
 
 .box-review2 {
-    display: flex;
-
-    opacity: 0%;
-    transition: opacity 5s;
+    /* display: flex; */
+    transition: opacity 1s;
 }
 
 .box-review3 {
-    display: flex;
-
-    opacity: 0%;
-    transition: opacity 5s;
+    /* display: flex; */
+    transition: opacity 1s;
 }
 
 .review {
-    /* margin: 0px 40px; */
     margin: 0px 50px;
     height: 335px;
 }
 
-.review .image { /* OLHAR */ /* centraliza a imagem */
+.review .image { /* centraliza a imagem */
     justify-content: center;
     display: flex;
 }
@@ -579,6 +572,18 @@ footer input[type=submit]:hover {
 
     .box-review {
         overflow: scroll;
+    }
+
+    .box-review1 {
+        display: flex !important;
+    }
+
+    .box-review2 {
+        display: flex !important;
+    }
+
+    .box-review3 {
+        display: flex !important;
     }
 
     .review {
