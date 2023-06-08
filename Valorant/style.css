@@ -47,6 +47,9 @@ main {
 
 li {
     list-style: none;
+}
+
+.navegation li {
     padding: 0 30px;
 }
 
@@ -75,7 +78,7 @@ a { /* .navegation a */
 
 .navegation .menu-mobile {
     display: none;
-    margin-right: 65px; /* ver uma maneira melhor do que essa */
+    margin-right: 60px; /* ver uma maneira melhor do que essa */
 }
 
 .menu-mobile button {
@@ -132,14 +135,19 @@ main section {
     text-shadow: 0px 0px 5px white;
 }
 
-.online {
-    margin-right: 60px;
-}
-
-.online p.top {
+.players p.top {
     font-size: 16px;
     font-weight: 400;
     display: flex;
+}
+
+.players p.bottom {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.online {
+    margin-right: 60px;
 }
 
 .blue-ball {
@@ -150,28 +158,12 @@ main section {
     border-radius: 50%;
 }
 
-.online p.bottom {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.playing-now p.top {
-    font-size: 16px;
-    font-weight: 400;
-    display: flex;
-}
-
 .green-ball {
     display: block;
     height: 10px;
     width: 10px;
     background-color: #92FF88;
     border-radius: 50%;
-}
-
-.playing-now p.bottom {
-    font-size: 32px;
-    font-weight: 700;    
 }
 
 .button {
@@ -192,7 +184,11 @@ main section {
     margin-left: 10px;
 }
 
-@media (max-width: 966px) {
+@media (max-width: 977px) {
+    .navegation {
+        width: 100%;
+    }
+
     .navegation a { /* fazer a linha inteira ser clicavel e linhas para dividir */
         color: white;
         width: 100%;
@@ -219,13 +215,18 @@ main section {
         position: absolute;
         top: 86px;
         right: 10px;
-        padding: 10px 0px;
+        padding: 10px 20px;
         border-radius: 10px;
         z-index: 100;
     }
     
     .navegation .links li {
         margin: 15px 0px;
+        padding: 0;
+    }
+    
+    .contents {
+        width: 100%;
     }
 
     .main-texts p.top {
@@ -240,14 +241,20 @@ main section {
 
 @media(max-width: 450px){
     .main-texts p.top {
+        width: 100%;
         font-size: 22vw;
     }
 
     .main-texts p.bottom {
+        width: 100%;
+        font-size: 4vw;
+    }
+
+    .players p.top {
         font-size: 4vw;
     }
     
-    .online p.bottom {
+    .players p.bottom {
         font-size: 7.15vw;
     }
 }
