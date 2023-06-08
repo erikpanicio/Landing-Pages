@@ -25,3 +25,6 @@ https://erikpanicio.github.io/Landing-Pages/Cafe%20Street/index.html
 
 ## Para acessar o projeto:
 https://erikpanicio.github.io/Landing-Pages/Pizzaland/index.html
+
+
+https://erikpanicio.github.io/Landing-Pages/Valorant/index.html
