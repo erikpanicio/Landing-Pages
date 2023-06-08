@@ -19,11 +19,13 @@ main {
     background-image: url("images/background-section1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-position: right;
+    height: auto;
     width: 100vw;
+    padding-bottom: 80px;
 }
 
-.container { /* contents */
+.container {
     display: flex;
     justify-content: center;
 }
@@ -38,7 +40,7 @@ main {
     align-items: center;
 }
 
-.navegation ul:nth-child(2) {
+.navegation .links {
     display: flex;
 }
 
@@ -51,6 +53,7 @@ a { /* .navegation a */
     font-size: 18px;
     color: #0D0C0C;
     font-weight: 500;
+    transition: color 0.2s;
 }
 
 .navegation a:hover {
@@ -69,6 +72,28 @@ a { /* .navegation a */
     transition: border 0.1s;
 }
 
+.navegation .menu-mobile {
+    display: none;
+    margin-right: 65px; /* ver uma maneira melhor do que essa */
+}
+
+.menu-mobile button {
+    background-color: transparent;
+    border-top: 2px solid black;
+    width: 30px;
+    cursor: pointer;
+}
+
+.menu-mobile button::before,
+.menu-mobile button::after {
+    content: "";
+    height: 2px;
+    width: 30px;
+    margin-top: 8px;
+    display: block;
+    background: black;
+}
+
 main section {
     margin-top: 80px;
 }
@@ -81,7 +106,15 @@ main section {
 .main-texts p.top {
     font-size: 120px;
     font-weight: 600;
-    width: 450px; /* tirar para ficar normal?? */
+    /* width: 450px;  *//* tirar para ficar normal?? */
+    text-shadow: 0px 0px 5px white;
+}
+
+.main-texts p.top span {
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(136, 30, 28);
+    text-shadow: 1px 1px 50px white;
 }
 
 .main-texts p.bottom {
@@ -89,6 +122,7 @@ main section {
     font-weight: 500;
     width: 310px; /* tirar e por <br> ??? */
     margin-top: 20px;
+    text-shadow: 0px 0px 5px white;
 }
 
 .players {
@@ -159,4 +193,41 @@ main section {
     background-color: red;
     height: 100vh;
     width: 100vw;
+}
+
+@media (max-width: 966px) {
+    .navegation a { /* fazer a linha inteira ser clicavel e linhas para dividir */
+        color: white;
+        width: 100%;
+    }
+
+    .navegation a.install {
+        border-color: white;
+    }
+
+    .navegation .menu-mobile {
+        display: block;
+    }
+    
+    .navegation .links img {
+        filter: invert(100%);
+    }
+
+    .navegation .links {
+        display: none;
+
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 86px;
+        right: 10px;
+        padding: 10px 0px;
+        border-radius: 10px;
+        z-index: 100;
+    }
+    
+    .navegation .links li {
+        margin: 15px 0px;
+    }
 }

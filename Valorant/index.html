@@ -11,10 +11,10 @@
     <main>
         <header class="container">
             <nav class="navegation">
-                <ul>
+                <ul class="logo">
                     <li><a href="#"><img src="images/logo.png" alt=""></a></li>
                 </ul>
-                <ul>
+                <ul class="links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Store</a></li>
                     <li><a href="#">News</a></li>
@@ -22,12 +22,15 @@
                     <li><a href="#"><img src="images/card-icon.png" alt=""></a></li>
                     <li><a href="#" class="install">Install Now</a></li>
                 </ul>
+                <ul class="menu-mobile"> <!-- menu que aparecerá quando não couber o padrão -->
+                    <li><button onclick="menu()"></button></li>
+                </ul>
             </nav>
         </header>
         <section class="container">
             <div class="contents">
                 <div class="main-texts">
-                    <p class="top">Play,<br>Improve<br>& Win</p>
+                    <p class="top">Play,<br><span>Improve</span><br>& Win</p>
                     <p class="bottom">RougePlay is the ultimate platform for playing, discussing nad creating game</p>
                 </div>
                 <div class="players">
