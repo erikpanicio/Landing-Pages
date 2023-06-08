@@ -101,7 +101,7 @@ main section {
 
 .contents {
     width: 1400px;
-    margin: 0 30px;
+    padding: 0 30px;
 }
 
 .main-texts p.top {
@@ -238,13 +238,18 @@ main section {
     }
 }
 
-@media(max-width: 700px){
+@media(max-width: 450px){
     .main-texts p.top {
-        /* font-size: 15vw; */
-        /* font-size: 100px; */
+        font-size: 22vw;
     }
 
     .main-texts p.bottom {
-        /* font-size: 1.9vw; */
+        font-size: 4vw;
+    }
+    
+    .online p.bottom {
+        font-size: 7.15vw;
     }
 }
+
+/* que funciona para tela grandes, usar min-width também */
