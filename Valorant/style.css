@@ -230,4 +230,12 @@ main section {
     .navegation .links li {
         margin: 15px 0px;
     }
+
+    .main-texts p.top {
+        font-size: 12.5vw;
+    }
+
+    .main-texts p.bottom {
+        font-size: 1.9vw;
+    }
 }
