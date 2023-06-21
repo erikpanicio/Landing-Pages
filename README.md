@@ -1,4 +1,4 @@
-# Cafe Street (em melhoria)
+# Cafe Street
 
 <a href="https://erikpanicio.github.io/Landing-Pages/Cafe%20Street/index.html"><img src="Cafe Street/images/cafe-street.png"></a>
 
