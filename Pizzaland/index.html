@@ -179,54 +179,54 @@
             </div>
             <h3>Our Special Pizza Menu</h3>
             <div class="box-pizzas">
-                <a href="#" class="box-pizza">
+                <button class="box-pizza" onclick="openFullscreen(0)">
                     <div class="image"><img src="images/pizza1.png" alt="Meat Pizza"></div>
                     <div class="text">
-                        <h4>Meat Pizza</h4>
+                        <h4></h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt ad facere iusto.</p>
                         <p class="value">$46.00</p>
                     </div>
-                </a>
-                <a href="#" class="box-pizza">
+                </button>
+                <button class="box-pizza" onclick="openFullscreen()">
                     <div class="image"><img src="images/pizza2.png" alt="Cheeseburger Pizza"></div>
                     <div class="text">
                         <h4>Cheeseburger Pizza</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt ad facere iusto.</p>
                         <p class="value">$47.00</p>
                     </div>
-                </a>
-                <a href="#" class="box-pizza">
+                </button>
+                <button class="box-pizza" onclick="openFullscreen()">
                     <div class="image"><img src="images/pizza3.png" alt="Supreme Pizza"></div>
                     <div class="text">
                         <h4>Supreme Pizza</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt ad facere iusto.</p>
                         <p class="value">$45.00</p>
                     </div>
-                </a>
-                <a href="#" class="box-pizza">
+                </button>
+                <button class="box-pizza" onclick="openFullscreen()">
                     <div class="image"><img src="images/pizza4.png" alt="The All Meat Pizza"></div>
                     <div class="text">
                         <h4>The All Meat Pizza</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt ad facere iusto.</p>
                         <p class="value">$48.00</p>
                     </div>
-                </a>
-                <a href="#" class="box-pizza">
+                </button>
+                <button class="box-pizza" onclick="openFullscreen()">
                     <div class="image"><img src="images/pizza5.png" alt=""></div>
                     <div class="text">
                         <h4>Chicken Alfredo Pizza</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt ad facere iusto.</p>
                         <p class="value">$44.00</p>
                     </div>
-                </a>
-                <a href="#" class="box-pizza">
+                </button>
+                <button class="box-pizza" onclick="openFullscreen()">
                     <div class="image"><img src="images/pizza6.png" alt="Margherita Pizza"></div>
                     <div class="text">
                         <h4>Margherita Pizza</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt ad facere iusto. lore</p>
                         <p class="value">$44.00</p>
                     </div>
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -247,7 +247,7 @@
                     <div class="pizza">
                         <img src="images/shop-pizza1.png" alt="Cheeseburger Pizza">
                         <div class="text">
-                            <button class="button">Add to Cart</button>
+                            <button class="button">Add to Cart</button> <!-- AQUI JÁ É PARA ADICIONAR NO CARRINHO -->
                             <h4>1 - Cheeseburger Pizza</h4>
                             <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium atque, ducimus eligendi qua.</p>
                             <p class="value">$45.00</p>
@@ -342,10 +342,10 @@
             <div class="box-chefs">
                 <div class="box-chef">
                     <img src="images/chef1.png" alt="Chef">
-                    <div class="information" onmouseover="show_social1()" onmouseout="hidden_social1()">
+                    <div class="information" onmouseover="showSocial(0)" onmouseout="hiddenSocial(0)">
                         <p class="up">Joe Root</p>
                         <p class="down">Assistant Chef</p>
-                        <div class="images images1">
+                        <div class="images">
                             <a href="#"><img src="images/icon-skype.svg" class="social" alt="Skype"></a>
                             <a href="#"><img src="images/icon-twitter-white.svg" class="social" alt="Twitter"></a>
                             <a href="#"><img src="images/icon-whatsapp.svg" class="social" alt="Whatsapp"></a>
@@ -355,10 +355,10 @@
                 </div>
                 <div class="box-chef">
                     <img src="images/chef2.png" alt="Chef">
-                    <div class="information" onmouseover="show_social2()" onmouseout="hidden_social2()">
+                    <div class="information" onmouseover="showSocial(1)" onmouseout="hiddenSocial(1)">
                         <p class="up">Eion Morgan</p>
                         <p class="down">Head of Chef</p>
-                        <div class="images images2">
+                        <div class="images">
                             <a href="#"><img src="images/icon-skype.svg" class="social" alt="Skype"></a>
                             <a href="#"><img src="images/icon-twitter-white.svg" class="social" alt="Twitter"></a>
                             <a href="#"><img src="images/icon-whatsapp.svg" class="social" alt="Whatsapp"></a>
@@ -368,10 +368,10 @@
                 </div>
                 <div class="box-chef">
                     <img src="images/chef3.png" alt="Chef">
-                    <div class="information" onmouseover="show_social3()" onmouseleave="hidden_social3()">
+                    <div class="information" onmouseover="showSocial(2)" onmouseleave="hiddenSocial(2)">
                         <p class="up">Tamin Lqbal</p>
                         <p class="down">Interal Chef</p>
-                        <div class="images images3">
+                        <div class="images">
                             <a href="#"><img src="images/icon-skype.svg" class="social" alt="Skype"></a>
                             <a href="#"><img src="images/icon-twitter-white.svg" class="social" alt="Twitter"></a>
                             <a href="#"><img src="images/icon-whatsapp.svg" class="social" alt="Whatsapp"></a>
@@ -393,29 +393,64 @@
             </div>
             <h3>Our Seen Best Gallery</h3>
             <div class="gallery-box-grid">
-                <div class="item item1" onclick="open_fullscreen(1)">
+                <div class="item item1" onclick="openFullscreen(0)">
                     <img src="images/gallery-1.png" alt="Pizza">
                 </div>
-                <div class="item item2" onclick="open_fullscreen(2)">
+                <div class="item item2" onclick="openFullscreen(1)">
                     <img src="images/gallery-2.png" alt="Pizza">
                 </div>
-                <div class="item item3" onclick="open_fullscreen(3)">
+                <div class="item item3" onclick="openFullscreen(2)">
                     <img src="images/gallery-3.png" alt="Pizza">
                 </div>
-                <div class="item item4" onclick="open_fullscreen(4)">
+                <div class="item item4" onclick="openFullscreen(3)">
                     <img src="images/gallery-4.png" alt="Pizza">
                 </div>
-                <div class="item item5" onclick="open_fullscreen(5)">
+                <div class="item item5" onclick="openFullscreen(4)">
                     <img src="images/gallery-5.png" alt="Pizza">
                 </div>
-                <div class="item item6" onclick="open_fullscreen(6)">
+                <div class="item item6" onclick="openFullscreen(5)">
                     <img src="images/gallery-6.png" alt="Pizza">
                 </div>
             </div>
             <div class="gallery-fullscreen">
-                <div class="gallery-box-fullscreen">
-                    <button onclick="close_fullscreen()">X</button>
-                    <img src="" alt="Pizza"> <!-- onde aparece a imagem quando abre na tela -->
+                <div class="window">
+                    <div class="box-image"><img src="" alt="Pizza"></div> <!-- onde aparece a imagem quando abre na tela -->
+                    <div class="box-informations">
+
+                        <div class="pizza-informations margin-bottom">
+                            <div class="pizza-name">Peperoni</div>
+                            <p class="pizza-desc">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ex, fugiat molestias, beatae animi natus repellendus dolorum soluta voluptatibus sit quis optio culpa doloremque reiciendis cum nobis voluptatum pariatur numquam.
+                            </p>
+                        </div>
+
+                        <div class="pizza-sizes margin-bottom">
+                            <h1>TAMANHO</h1>
+                            <div class="sizes">
+                                <button>Pequena</button>
+                                <button>Média</button>
+                                <button>Grande</button>
+                            </div>
+                        </div>
+
+                        <div class="pizza-price margin-bottom">
+                            <h1>PREÇO</h1>
+                            <div class="prices">
+                                <div class="price">R$20.19</div>
+                                <div class="box-amount">
+                                    <button>-</button>
+                                    <div class="amount">1</div>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart">
+                            <button class="add-cart">Adicionar ao Carrinho</button>
+                            <button class="cancel-cart" onclick="close_fullscreen()">Cancelar</button>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -609,6 +644,7 @@
             </div>
         </div>
     </footer>
+    <script src="pizzas.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -66,7 +66,7 @@ window.addEventListener("resize", function () {
     }
 })
 
-/* Information */
+/* Service */
 
 var n = 0
 
@@ -84,6 +84,24 @@ function colocar() {
         n = 0
     }
 }
+
+/* Menu */
+
+function teste() {
+    pizzasJson.map((item, index) => {
+        let h4_boxpizzas = document.querySelectorAll("#menu .box-pizzas h4")
+
+        for(; index <= pizzasJson.length; index++){
+            /* h4_boxpizzas[index].innerHTML = item.name */
+            console.log("Item name:",item.name)
+            console.log("Index:",index)
+            console.log(pizzasJson.length)
+        }
+    })
+    console.log("TERMINOU")
+}
+
+teste()
 
 /* Shop */
 
@@ -128,76 +146,31 @@ function shop_button_right() {
 
 /* Section Team */
 
-var social1 = document.querySelector("#team .images1")
-var social2 = document.querySelector("#team .images2")
-var social3 = document.querySelector("#team .images3")
-
-function show_social1() {
-    social1.style.display = "block"
+function showSocial(num_social) {
+    let social_image = document.getElementsByClassName("images")[num_social]
+    social_image.style.display = "block"
 }
 
-function show_social2() {
-    social2.style.display = "block"
-}
-
-function show_social3() {
-    social3.style.display = "block"
-}
-
-function hidden_social1() {
-    social1.style.display = "none"
-}
-
-function hidden_social2() {
-    social2.style.display = "none"
-}
-
-function hidden_social3() {
-    social3.style.display = "none"
+function hiddenSocial(num_social) {
+    let social_image = document.getElementsByClassName("images")[num_social]
+    social_image.style.display = "none"
 }
 
 /* Section gallery */
 
 var gallery_fullscreen = document.querySelector("#gallery .gallery-fullscreen")
 
-/* melhorar (deixar mais automático) */
-
-function open_fullscreen(imagem) {
+function openFullscreen(num_image) {
     gallery_fullscreen.style.display = "flex"
     document.body.style.overflowY = "hidden"
 
-    var image_gallery_fullscreen = document.querySelector(".gallery-fullscreen img")
+    let div_window = document.querySelector(".window")
+    div_window.scrollTop = 0
 
-    if (imagem == 1) {
-        let image_gallery = document.querySelector(".gallery-box-grid .item1 img")
-        var image_gallery_src = image_gallery.getAttribute("src")
-        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
-    }
-    else if (imagem == 2) {
-        let image_gallery = document.querySelector(".gallery-box-grid .item2 img")
-        var image_gallery_src = image_gallery.getAttribute("src")
-        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
-    }
-    else if (imagem == 3) {
-        let image_gallery = document.querySelector(".gallery-box-grid .item3 img")
-        var image_gallery_src = image_gallery.getAttribute("src")
-        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
-    }
-    else if (imagem == 4) {
-        let image_gallery = document.querySelector(".gallery-box-grid .item4 img")
-        var image_gallery_src = image_gallery.getAttribute("src")
-        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
-    }
-    else if (imagem == 5) {
-        let image_gallery = document.querySelector(".gallery-box-grid .item5 img")
-        var image_gallery_src = image_gallery.getAttribute("src")
-        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
-    }
-    else if (imagem == 6) {
-        let image_gallery = document.querySelector(".gallery-box-grid .item6 img")
-        var image_gallery_src = image_gallery.getAttribute("src")
-        image_gallery_fullscreen.setAttribute("src", image_gallery_src)
-    }
+    let image_gallery = document.querySelectorAll(".gallery-box-grid .item img")
+    let image_gallery_src = image_gallery[num_image].getAttribute("src")
+    let image_gallery_fullscreen = document.querySelector(".gallery-fullscreen img")
+    image_gallery_fullscreen.setAttribute("src", image_gallery_src)
 }
 
 function close_fullscreen() {
